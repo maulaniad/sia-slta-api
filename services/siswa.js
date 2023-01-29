@@ -2,7 +2,7 @@ const db = require('./_db');
 const helper = require('../helper');
 
 
-async function getSiswa() {
+const getSiswa = async () => {
   const rows = await db.query(
     `
       SELECT id_user AS id, nisn, name AS nama, email, classname AS kelas,
@@ -20,7 +20,7 @@ async function getSiswa() {
   }
 }
 
-async function getOneSiswa(requestParams) {
+const getOneSiswa = async (requestParams) => {
   const rows = await db.query(
     `
       SELECT id_user AS id, nisn, name AS nama, email, classname AS kelas,
@@ -39,7 +39,7 @@ async function getOneSiswa(requestParams) {
   }
 }
 
-async function getLengthSiswa() {
+const getLengthSiswa = async () => {
   const rows = await db.query(
     `SELECT COUNT(*) AS length FROM users WHERE id_role = 'ROL02';`
   );
@@ -49,7 +49,7 @@ async function getLengthSiswa() {
   return data[0].length;
 }
 
-async function createSiswa(requestBody) {
+const createSiswa = async (requestBody) => {
   const length = await getLengthSiswa();
   let parsedLength = parseInt(length) + 1;
 
@@ -75,7 +75,7 @@ async function createSiswa(requestBody) {
   return { message: message };
 }
 
-async function updateSiswa(requestParams, { nisn, name, email, password, classId }) {
+const updateSiswa = async (requestParams, { nisn, name, email, password, classId }) => {
   const dataSiswa = helper.emptyOrRows(
     await db.query(
       `SELECT * FROM users WHERE id_user = '${requestParams.id}';`
@@ -105,7 +105,7 @@ async function updateSiswa(requestParams, { nisn, name, email, password, classId
   return { message: message };
 }
 
-async function deleteSiswa(requestParams) {
+const deleteSiswa = async (requestParams) => {
   let dataSiswa = helper.emptyOrRows(
     await db.query(
       `SELECT * FROM users WHERE id_user = '${requestParams.id}';`

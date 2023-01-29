@@ -4,7 +4,7 @@ const siswa = require('../services/siswa');
 
 
 router.get(
-  '/', async function(req, res, next) {
+  '/', async (req, res, next) => {
     try {
       res.json(await siswa.getSiswa());
     }
@@ -16,7 +16,7 @@ router.get(
 );
 
 router.get(
-  '/:id', async function(req, res, next) {
+  '/:id', async (req, res, next) => {
     try {
       res.json(await siswa.getOneSiswa(req.params));
     }
@@ -28,7 +28,7 @@ router.get(
 );
 
 router.post(
-  '/', async function(req, res, next) {
+  '/', async (req, res, next) => {
     try {
       res.json(await siswa.createSiswa(req.body));
     }
@@ -40,7 +40,7 @@ router.post(
 )
 
 router.put(
-  '/:id', async function(req, res, next) {
+  '/:id', async (req, res, next) => {
     try {
       res.json(await siswa.updateSiswa(req.params, req.body));
     }
@@ -52,7 +52,7 @@ router.put(
 )
 
 router.delete(
-  '/:id', async function(req, res, next) {
+  '/:id', async (req, res, next) => {
     try {
       res.json(await siswa.deleteSiswa(req.params));
     }

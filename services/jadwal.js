@@ -2,7 +2,7 @@ const db = require('./_db');
 const helper = require('../helper');
 
 
-async function getJadwal(concentrationId = 'CON01') {
+const getJadwal = async (concentrationId = 'CON01') => {
   const rows = await db.query(
     `
       SELECT subjects.subject_name AS mapel, schedules.hours AS jam,
