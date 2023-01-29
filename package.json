@@ -1,0 +1,16 @@
+{
+  "name": "sia_slta",
+  "version": "1.0.0",
+  "description": "API Sistem Informasi Akademik - SLTA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "Mameng Galuh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3"
+  }
+}
