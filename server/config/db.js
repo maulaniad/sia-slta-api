@@ -1,5 +1,5 @@
-import mysql from "mysql2";
 import "dotenv/config";
+import mysql from "mysql2";
 
 const database = mysql.createConnection(
   {
