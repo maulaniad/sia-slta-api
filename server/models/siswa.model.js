@@ -14,11 +14,22 @@ class Siswa {
 }
 
 Siswa.create = (newSiswa, resultHandler) => {
+  const placeholders = Object.keys(newSiswa).map(() => "?").join(", ");
+
   database.query(`
     INSERT INTO siswa (
       nisn, nama_siswa, email, jenis_kelamin, tanggal_lahir, alamat,
       user_id, kelas_id
-    ) VALUES ?;`, newSiswa, (error, result) => {
+    ) VALUES (${placeholders})`, [
+      newSiswa.nisn,
+      newSiswa.namaSiswa,
+      newSiswa.email,
+      newSiswa.jenisKelamin,
+      newSiswa.tanggalLahir,
+      newSiswa.alamat,
+      newSiswa.userId,
+      newSiswa.kelasId
+    ], (error, result) => {
       if (error) {
         console.log(`Error querying the DB ${error}`);
         resultHandler(error, null);
@@ -27,14 +38,14 @@ Siswa.create = (newSiswa, resultHandler) => {
 
       const dataSiswa = {id: result.insertId, ...newSiswa}; 
 
-      console.log(`Siswa added : ${dataSiswa}`);
       resultHandler(null, dataSiswa);
     }
   );
 }
 
 Siswa.getAll = (keyword, resultHandler) => {
-  let sql = "SELECT * FROM siswa";
+  let sql = `SELECT nisn, nama_siswa, email, jenis_kelamin, tanggal_lahir,
+             alamat, user_id, kelas_id FROM siswa`;
 
   if (keyword) {
     sql += ` WHERE nama_siswa LIKE '%${keyword}%';`;
@@ -49,6 +60,22 @@ Siswa.getAll = (keyword, resultHandler) => {
 
     resultHandler(null, result);
   });
+}
+
+Siswa.getById = (idSiswa, resultHandler) => {
+  database.query(
+    `SELECT nisn, nama_siswa, email, jenis_kelamin, tanggal_lahir,
+    alamat, user_id, kelas_id FROM siswa WHERE id_siswa = ${idSiswa}`,
+    (error, result) => {
+      if (error) {
+        console.log(`Error querying the DB ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  );
 }
 
 export default Siswa;
