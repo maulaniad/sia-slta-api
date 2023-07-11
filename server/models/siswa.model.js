@@ -65,7 +65,7 @@ Siswa.getAll = (keyword, resultHandler) => {
 Siswa.getById = (idSiswa, resultHandler) => {
   database.query(
     `SELECT nisn, nama_siswa, email, jenis_kelamin, tanggal_lahir,
-    alamat, user_id, kelas_id FROM siswa WHERE id_siswa = ${idSiswa}`,
+     alamat, user_id, kelas_id FROM siswa WHERE id_siswa = ${idSiswa}`,
     (error, result) => {
       if (error) {
         console.log(`Error querying the DB ${error}`);
