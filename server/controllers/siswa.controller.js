@@ -1,10 +1,10 @@
 import moment from "moment";
 import Siswa from "../models/siswa.model.js";
 
-const convertDate = (mysqlDate) => {
+const convertDate = (mysqlDate, format) => {
   const convertedDate = moment.utc(mysqlDate).toDate();
 
-  return moment(convertedDate).format("DD-MM-YYYY");
+  return moment(convertedDate).format(format);
 }
 
 const sendFieldError = (fieldName, res) => {
@@ -61,7 +61,7 @@ const findAll = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
-    data.forEach((row) => row.tanggal_lahir = convertDate(row.tanggal_lahir));
+    data.forEach((row) => row.tanggal_lahir = convertDate(row.tanggal_lahir, "DD-MM-YYYY"));
 
     return res.status(200).json({ status: 200, message: "Success", data: data });
   });
@@ -79,9 +79,67 @@ const findById = (req, res) => {
       return res.status(200).json({ status: 200, message: "Data not found ..." });
     }
   
-    data[0].tanggal_lahir = convertDate(data[0].tanggal_lahir);
+    data[0].tanggal_lahir = convertDate(data[0].tanggal_lahir, "DD-MM-YYYY");
     return res.status(200).json({ status: 200, message: "Success", data: data[0] });
   });
 }
 
-export { create, findAll, findById };
+const update = (req, res) => {
+  const id = req.params.id;
+
+  Siswa.getById(id, (error, data) => {
+    if (error) {
+      return res.status(500).json({ status: 500, message: `${error.message}` });
+    }
+
+    if (data.length === 0) {
+      return res.status(200).json({ status: 200, message: "Data not found ..." });
+    }
+
+    data[0].tanggal_lahir = convertDate(data[0].tanggal_lahir, "YYYY-MM-DD");
+  
+    const currentData = data[0];
+    const newData = new Siswa({
+      nisn: currentData.nisn,
+      namaSiswa: currentData.nama_siswa,
+      email: currentData.email,
+      jenisKelamin: currentData.jenis_kelamin,
+      tanggalLahir: currentData.tanggal_lahir,
+      alamat: currentData.alamat,
+      userId: currentData.user_id,
+      kelasId: currentData.kelas_id
+    });
+
+    console.log(newData);
+
+    const {
+      nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat, userId, kelasId
+    } = req.body;
+  
+    if (nisn)         { newData.nisn = nisn; }
+    if (namaSiswa)    { newData.namaSiswa = namaSiswa; }
+    if (email)        { newData.email = email; }
+    if (jenisKelamin) { newData.jenisKelamin = jenisKelamin; }
+    if (tanggalLahir) { newData.tanggalLahir = tanggalLahir; }
+    if (alamat)       { newData.alamat = alamat; }
+    if (userId)       { newData.userId = userId; }
+    if (kelasId)      { newData.kelasId = kelasId; }
+
+    Siswa.update(id, newData, (error, data) => {
+      if (error) {
+        return res.status(500).json({ status: 500, message: `${error.message}` });
+      }
+
+      return res.status(200).json(
+        {
+          status: 200, message: "Success",
+          before: currentData,
+          after: newData,
+          records: data
+        }
+      );
+    });
+  });
+}
+
+export { create, findAll, findById, update };
