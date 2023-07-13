@@ -18,8 +18,8 @@ Siswa.create = (newSiswa, resultHandler) => {
 
   database.query(`
     INSERT INTO siswa (
-      nisn, nama_siswa, email, jenis_kelamin, tanggal_lahir, alamat,
-      user_id, kelas_id
+      nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat,
+      userId, kelasId
     ) VALUES (${placeholders})`, [
       newSiswa.nisn,
       newSiswa.namaSiswa,
@@ -44,11 +44,11 @@ Siswa.create = (newSiswa, resultHandler) => {
 }
 
 Siswa.getAll = (keyword, resultHandler) => {
-  let sql = `SELECT nisn, nama_siswa, email, jenis_kelamin, tanggal_lahir,
-             alamat, user_id, kelas_id FROM siswa`;
+  let sql = `SELECT nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
+             alamat, userId, kelasId FROM siswa`;
 
   if (keyword) {
-    sql += ` WHERE nama_siswa LIKE '%${keyword}%';`;
+    sql += ` WHERE namaSiswa LIKE '%${keyword}%';`;
   }
 
   database.query(sql, (error, result) => {
@@ -64,8 +64,8 @@ Siswa.getAll = (keyword, resultHandler) => {
 
 Siswa.getById = (idSiswa, resultHandler) => {
   database.query(
-    `SELECT nisn, nama_siswa, email, jenis_kelamin, tanggal_lahir,
-     alamat, user_id, kelas_id FROM siswa WHERE id_siswa = ${idSiswa}`,
+    `SELECT nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
+     alamat, userId, kelasId FROM siswa WHERE idSiswa = ${idSiswa}`,
     (error, result) => {
       if (error) {
         console.log(`Error querying the DB: ${error}`);
@@ -81,11 +81,11 @@ Siswa.getById = (idSiswa, resultHandler) => {
 Siswa.update = (idSiswa, newSiswa, resultHandler) => {
   database.query(
     `
-      UPDATE siswa SET nisn = '${newSiswa.nisn}', nama_siswa = '${newSiswa.namaSiswa}',
-      email = '${newSiswa.email}', jenis_kelamin = '${newSiswa.jenisKelamin}',
-      tanggal_lahir = '${newSiswa.tanggalLahir}', alamat = '${newSiswa.alamat}',
-      user_id = ${newSiswa.userId}, kelas_id = ${newSiswa.kelasId}
-      WHERE id_siswa = ${idSiswa}
+      UPDATE siswa SET nisn = '${newSiswa.nisn}', namaSiswa = '${newSiswa.namaSiswa}',
+      email = '${newSiswa.email}', jenisKelamin = '${newSiswa.jenisKelamin}',
+      tanggalLahir = '${newSiswa.tanggalLahir}', alamat = '${newSiswa.alamat}',
+      userId = ${newSiswa.userId}, kelasId = ${newSiswa.kelasId}
+      WHERE idSiswa = ${idSiswa}
     `,
     (error, result) => {
       if (error) {
@@ -101,7 +101,7 @@ Siswa.update = (idSiswa, newSiswa, resultHandler) => {
 
 Siswa.delete = (idSiswa, resultHandler) => {
   database.query(
-    `DELETE FROM siswa WHERE id_siswa = ${idSiswa}`,
+    `DELETE FROM siswa WHERE idSiswa = ${idSiswa}`,
     (error, result) => {
       if (error) {
         console.log(`Error deleting Siswa: ${error}`);

@@ -49,7 +49,7 @@ const create = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
-    return res.status(201).json({ status: 201, message: "Success!", data: data[0]});
+    return res.status(201).json({ status: 201, message: "Success!", data: data});
   });
 }
 
@@ -61,7 +61,7 @@ const findAll = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
-    data.forEach((row) => row.tanggal_lahir = convertDate(row.tanggal_lahir, "DD-MM-YYYY"));
+    data.forEach((row) => row.tanggalLahir = convertDate(row.tanggalLahir, "DD-MM-YYYY"));
 
     return res.status(200).json({ status: 200, message: "Success", data: data });
   });
@@ -79,7 +79,7 @@ const findById = (req, res) => {
       return res.status(200).json({ status: 200, message: "Data not found ..." });
     }
   
-    data[0].tanggal_lahir = convertDate(data[0].tanggal_lahir, "DD-MM-YYYY");
+    data[0].tanggalLahir = convertDate(data[0].tanggalLahir, "DD-MM-YYYY");
     return res.status(200).json({ status: 200, message: "Success", data: data[0] });
   });
 }
@@ -96,21 +96,19 @@ const update = (req, res) => {
       return res.status(200).json({ status: 200, message: "Data not found ..." });
     }
 
-    data[0].tanggal_lahir = convertDate(data[0].tanggal_lahir, "YYYY-MM-DD");
+    data[0].tanggalLahir = convertDate(data[0].tanggalLahir, "YYYY-MM-DD");
 
     const currentData = data[0];
     const newData = new Siswa({
       nisn: currentData.nisn,
-      namaSiswa: currentData.nama_siswa,
+      namaSiswa: currentData.namaSiswa,
       email: currentData.email,
-      jenisKelamin: currentData.jenis_kelamin,
-      tanggalLahir: currentData.tanggal_lahir,
+      jenisKelamin: currentData.jenisKelamin,
+      tanggalLahir: currentData.tanggalLahir,
       alamat: currentData.alamat,
-      userId: currentData.user_id,
-      kelasId: currentData.kelas_id
+      userId: currentData.userId,
+      kelasId: currentData.kelasId
     });
-
-    console.log(newData);
 
     const {
       nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat, userId, kelasId
