@@ -1,5 +1,5 @@
-import { create, findAll, findById } from "../controllers/siswa.controller.js";
 import Router from "express";
+import { create, findAll, findById } from "../controllers/siswa.controller.js";
 
 const siswaRouter = Router();
 
