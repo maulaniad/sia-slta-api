@@ -97,7 +97,7 @@ const update = (req, res) => {
     }
 
     data[0].tanggal_lahir = convertDate(data[0].tanggal_lahir, "YYYY-MM-DD");
-  
+
     const currentData = data[0];
     const newData = new Siswa({
       nisn: currentData.nisn,
