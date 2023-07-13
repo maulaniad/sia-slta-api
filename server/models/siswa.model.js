@@ -31,7 +31,7 @@ Siswa.create = (newSiswa, resultHandler) => {
       newSiswa.kelasId
     ], (error, result) => {
       if (error) {
-        console.log(`Error querying the DB ${error}`);
+        console.log(`Error creating Siswa: ${error}`);
         resultHandler(error, null);
         return;
       }
@@ -53,7 +53,7 @@ Siswa.getAll = (keyword, resultHandler) => {
 
   database.query(sql, (error, result) => {
     if (error) {
-      console.log(`Error querying the DB ${error}`);
+      console.log(`Error querying the DB: ${error}`);
       resultHandler(error, null);
       return;
     }
@@ -68,7 +68,7 @@ Siswa.getById = (idSiswa, resultHandler) => {
      alamat, user_id, kelas_id FROM siswa WHERE id_siswa = ${idSiswa}`,
     (error, result) => {
       if (error) {
-        console.log(`Error querying the DB ${error}`);
+        console.log(`Error querying the DB: ${error}`);
         resultHandler(error, null);
         return;
       }
@@ -76,6 +76,42 @@ Siswa.getById = (idSiswa, resultHandler) => {
       resultHandler(null, result);
     }
   );
+}
+
+Siswa.update = (idSiswa, newSiswa, resultHandler) => {
+  database.query(
+    `
+      UPDATE siswa SET nisn = '${newSiswa.nisn}', nama_siswa = '${newSiswa.namaSiswa}',
+      email = '${newSiswa.email}', jenis_kelamin = '${newSiswa.jenisKelamin}',
+      tanggal_lahir = '${newSiswa.tanggalLahir}', alamat = '${newSiswa.alamat}',
+      user_id = ${newSiswa.userId}, kelas_id = ${newSiswa.kelasId}
+      WHERE id_siswa = ${idSiswa}
+    `,
+    (error, result) => {
+      if (error) {
+        console.log(`Error updating Siswa: ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  );
+}
+
+Siswa.delete = (idSiswa, resultHandler) => {
+  database.query(
+    `DELETE FROM siswa WHERE id_siswa = ${idSiswa}`,
+    (error, result) => {
+      if (error) {
+        console.log(`Error deleting Siswa: ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  )
 }
 
 export default Siswa;
