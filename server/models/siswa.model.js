@@ -44,7 +44,7 @@ Siswa.create = (newSiswa, resultHandler) => {
 }
 
 Siswa.getAll = (keyword, resultHandler) => {
-  let sql = `SELECT nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
+  let sql = `SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
              alamat, userId, kelasId FROM siswa`;
 
   if (keyword) {
@@ -64,7 +64,7 @@ Siswa.getAll = (keyword, resultHandler) => {
 
 Siswa.getById = (idSiswa, resultHandler) => {
   database.query(
-    `SELECT nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
+    `SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
      alamat, userId, kelasId FROM siswa WHERE idSiswa = ${idSiswa}`,
     (error, result) => {
       if (error) {
