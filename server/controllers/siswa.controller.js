@@ -63,7 +63,7 @@ const findAll = (req, res) => {
 
     data.forEach((row) => row.tanggalLahir = convertDate(row.tanggalLahir, "DD-MM-YYYY"));
 
-    return res.status(200).json({ status: 200, message: "Success", data: data });
+    return res.status(200).json({ status: 200, message: "Success!", data: data });
   });
 }
 
@@ -80,7 +80,7 @@ const findById = (req, res) => {
     }
   
     data[0].tanggalLahir = convertDate(data[0].tanggalLahir, "DD-MM-YYYY");
-    return res.status(200).json({ status: 200, message: "Success", data: data[0] });
+    return res.status(200).json({ status: 200, message: "Success!", data: data[0] });
   });
 }
 
@@ -93,7 +93,9 @@ const update = (req, res) => {
     }
 
     if (data.length === 0) {
-      return res.status(200).json({ status: 200, message: "Data not found ..." });
+      return res.status(200).json({
+        status: 200, message: "Data not found, therefore no action has been made ..."
+      });
     }
 
     data[0].tanggalLahir = convertDate(data[0].tanggalLahir, "YYYY-MM-DD");
@@ -130,7 +132,7 @@ const update = (req, res) => {
 
       return res.status(200).json(
         {
-          status: 200, message: "Success",
+          status: 200, message: "Success!",
           before: currentData,
           after: newData,
           records: data
@@ -140,4 +142,34 @@ const update = (req, res) => {
   });
 }
 
-export { create, findAll, findById, update };
+const deleteById = (req, res) => {
+  const id = req.params.id;
+
+  Siswa.getById(id, (error, data) => {
+    if (error) {
+      return res.status(500).json({ status: 500, message: `${error.message}` });
+    }
+
+    if (data.length === 0) {
+      return res.status(404).json({
+        status: 200, message: "Data not found, therefore no action has been made ..."
+      });
+    }
+
+    const deletedData = data[0];
+
+    Siswa.delete(id, (error, data) => {
+      if (error) {
+        return res.status(500).json({ status: 500, message: `${error.message}` });
+      }
+
+      return res.status(200).json({
+        status: 200, message: "Success!",
+        deletedData: deletedData,
+        records: data
+      })
+    });
+  });
+}
+
+export { create, findAll, findById, update, deleteById};
