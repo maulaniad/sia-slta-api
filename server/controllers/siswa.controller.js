@@ -172,4 +172,4 @@ const deleteById = (req, res) => {
   });
 }
 
-export { create, findAll, findById, update, deleteById};
+export { create, findAll, findById, update, deleteById };
