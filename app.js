@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-  res.status(200).json({ status: 200, message: "Success" });
+  res.status(200).json({ status: 200, message: "Success!" });
 });
 
 app.use("/login-sek", authRouter);
