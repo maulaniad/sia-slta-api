@@ -1,7 +1,7 @@
 import "dotenv/config";
 import express from "express";
-import siswaRouter from "./server/routes/siswa.routes.js";
 import authRouter from "./server/routes/auth.routes.js";
+import siswaRouter from "./server/routes/siswa.routes.js";
 
 const app = express();
 
