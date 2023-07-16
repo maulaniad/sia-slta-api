@@ -111,7 +111,7 @@ Siswa.delete = (idSiswa, resultHandler) => {
 
       resultHandler(null, result);
     }
-  )
+  );
 }
 
 export default Siswa;

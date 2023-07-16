@@ -167,7 +167,7 @@ const deleteById = (req, res) => {
         status: 200, message: "Success!",
         deletedData: deletedData,
         records: data
-      })
+      });
     });
   });
 }
