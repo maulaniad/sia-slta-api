@@ -25,13 +25,13 @@ const create = (req, res) => {
     nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat, userId, kelasId
   } = req.body;
 
-  if (!nisn)         { return sendFieldError(Object.keys({nisn})[0], res); }
-  if (!namaSiswa)    { return sendFieldError(Object.keys({namaSiswa})[0], res); }
-  if (!email)        { return sendFieldError(Object.keys({email})[0], res); }
-  if (!jenisKelamin) { return sendFieldError(Object.keys({jenisKelamin})[0], res); }
-  if (!tanggalLahir) { return sendFieldError(Object.keys({tanggalLahir})[0], res); }
-  if (!alamat)       { return sendFieldError(Object.keys({alamat})[0], res); }
-  if (!userId)       { return sendFieldError(Object.keys({userId})[0], res); }
+  if (!nisn)         { return sendFieldError("nisn", res); }
+  if (!namaSiswa)    { return sendFieldError("namaSiswa", res); }
+  if (!email)        { return sendFieldError("email", res); }
+  if (!jenisKelamin) { return sendFieldError("jenisKelamin", res); }
+  if (!tanggalLahir) { return sendFieldError("tanggalLahir", res); }
+  if (!alamat)       { return sendFieldError("alamat", res); }
+  if (!userId)       { return sendFieldError("userId", res); }
 
   const siswa = new Siswa({
     nisn,
