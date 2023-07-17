@@ -1,11 +1,5 @@
-import moment from "moment";
+import { DateFormat, convertDate } from "../helpers/date.js";
 import Siswa from "../models/siswa.model.js";
-
-const convertDate = (mysqlDate, format) => {
-  const convertedDate = moment.utc(mysqlDate).toDate();
-
-  return moment(convertedDate).format(format);
-}
 
 const sendFieldError = (fieldName, res) => {
   res.status(400).json(
@@ -61,7 +55,9 @@ const findAll = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
-    data.forEach((row) => row.tanggalLahir = convertDate(row.tanggalLahir, "DD-MM-YYYY"));
+    data.forEach(
+      (row) => row.tanggalLahir = convertDate(row.tanggalLahir, DateFormat.FromMysql.toString())
+    );
 
     return res.status(200).json({ status: 200, message: "Success!", data: data });
   });
@@ -79,7 +75,7 @@ const findById = (req, res) => {
       return res.status(200).json({ status: 200, message: "Data not found ..." });
     }
   
-    data[0].tanggalLahir = convertDate(data[0].tanggalLahir, "DD-MM-YYYY");
+    data[0].tanggalLahir = convertDate(data[0].tanggalLahir, DateFormat.FromMysql.toString());
     return res.status(200).json({ status: 200, message: "Success!", data: data[0] });
   });
 }
@@ -98,7 +94,7 @@ const update = (req, res) => {
       });
     }
 
-    data[0].tanggalLahir = convertDate(data[0].tanggalLahir, "YYYY-MM-DD");
+    data[0].tanggalLahir = convertDate(data[0].tanggalLahir, DateFormat.ToMysql.toString());
 
     const currentData = data[0];
     const newData = new Siswa({
