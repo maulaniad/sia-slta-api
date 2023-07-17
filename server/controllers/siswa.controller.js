@@ -82,7 +82,11 @@ const findById = (req, res) => {
 }
 
 const update = (req, res) => {
-  const id = req.params.id;
+  let id = req.user.id;
+
+  if (req.user.role.toLowerCase() === "admin") {
+    id = req.params.id;
+  }
 
   Siswa.getById(id, (error, data) => {
     if (error) {
