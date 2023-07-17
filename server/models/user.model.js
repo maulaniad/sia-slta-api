@@ -83,15 +83,15 @@ User.update = (idUser, newUser, resultHandler) => {
 
 User.delete = (idUser, resultHandler) => {
   database.query(
-      "DELETE FROM user WHERE idUser = ?", [idUser],
-      (error, result) => {
-        if (error) {
-          console.log(`Error deleting User; ${error}`);
-          resultHandler(error, null);
-        }
-
-        resultHandler(null, result);
+    "DELETE FROM user WHERE idUser = ?", [idUser],
+    (error, result) => {
+      if (error) {
+        console.log(`Error deleting User; ${error}`);
+        resultHandler(error, null);
       }
+
+      resultHandler(null, result);
+    }
   );
 }
 
