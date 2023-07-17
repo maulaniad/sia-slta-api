@@ -83,9 +83,9 @@ Siswa.getById = (idSiswa, resultHandler) => {
 Siswa.update = (idSiswa, newSiswa, resultHandler) => {
   database.query(
     `
-      UPDATE siswa SET nisn = '?', namaSiswa = '?',
-      email = '?', jenisKelamin = '?',
-      tanggalLahir = '?', alamat = '?',
+      UPDATE siswa SET nisn = ?, namaSiswa = ?,
+      email = ?, jenisKelamin = ?,
+      tanggalLahir = ?, alamat = ?,
       userId = ?, kelasId = ?
       WHERE idSiswa = ?
     `, [

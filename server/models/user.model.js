@@ -50,7 +50,7 @@ User.getByUsername = (username, resultHandler) => {
     `
       SELECT idUser, username, password, namaRole as role FROM user
       JOIN role ON role.idRole = user.roleId
-      WHERE username = '?'
+      WHERE username = ?
     `, [username],
     (error, result) => {
       if (error) {
