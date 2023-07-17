@@ -8,6 +8,24 @@ class User {
   }
 }
 
+User.create = (newUser, resultHandler) => {
+  database.query(
+    `
+      INSERT INTO user (username, password, roleId)
+      VALUES (?, ?, ?)
+    `, [newUser.username, newUser.password, newUser.role],
+    (error, result) => {
+      if (error) {
+        console.log(`Error creating User: ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  );
+}
+
 User.getById = (idUser, resultHandler) => {
   database.query(
     `
