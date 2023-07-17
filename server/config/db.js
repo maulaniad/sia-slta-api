@@ -1,7 +1,7 @@
 import "dotenv/config";
 import mysql from "mysql2";
 
-const database = mysql.createConnection(
+const database = mysql.createPool(
   {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
@@ -10,7 +10,7 @@ const database = mysql.createConnection(
   }
 );
 
-database.connect(
+database.getConnection(
   (error) => {
     if (error) {
       throw error;
