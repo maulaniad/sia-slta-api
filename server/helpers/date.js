@@ -19,4 +19,4 @@ const convertDate = (mysqlDate, format) => {
   return moment(convertedDate).format(format);
 }
 
-export { DateFormat, convertDate }
+export { DateFormat, convertDate };
