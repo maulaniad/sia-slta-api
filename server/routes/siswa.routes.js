@@ -1,4 +1,4 @@
-import Router from "express";
+import { Router } from "express";
 import { create, findAll, findById, update, deleteById } from "../controllers/siswa.controller.js";
 import auth from "../middleware/auth.js";
 import { admin, siswa } from "../middleware/role.js";
