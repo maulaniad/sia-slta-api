@@ -16,11 +16,13 @@ class Siswa {
 Siswa.create = (newSiswa, resultHandler) => {
   const placeholders = Object.keys(newSiswa).map(() => "?").join(", ");
 
-  database.query(`
-    INSERT INTO siswa (
-      nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat,
-      userId, kelasId
-    ) VALUES (${placeholders})`, [
+  database.query(
+    `
+      INSERT INTO siswa (
+        nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat,
+        userId, kelasId
+      ) VALUES (${placeholders})
+    `, [
       newSiswa.nisn,
       newSiswa.namaSiswa,
       newSiswa.email,
@@ -65,7 +67,7 @@ Siswa.getAll = (keyword, resultHandler) => {
 Siswa.getById = (idSiswa, resultHandler) => {
   database.query(
     `SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
-     alamat, userId, kelasId FROM siswa WHERE idSiswa = ${idSiswa}`,
+     alamat, userId, kelasId FROM siswa WHERE idSiswa = ?`, [idSiswa],
     (error, result) => {
       if (error) {
         console.log(`Error querying the DB: ${error}`);
@@ -81,13 +83,22 @@ Siswa.getById = (idSiswa, resultHandler) => {
 Siswa.update = (idSiswa, newSiswa, resultHandler) => {
   database.query(
     `
-      UPDATE siswa SET nisn = '${newSiswa.nisn}', namaSiswa = '${newSiswa.namaSiswa}',
-      email = '${newSiswa.email}', jenisKelamin = '${newSiswa.jenisKelamin}',
-      tanggalLahir = '${newSiswa.tanggalLahir}', alamat = '${newSiswa.alamat}',
-      userId = ${newSiswa.userId}, kelasId = ${newSiswa.kelasId}
-      WHERE idSiswa = ${idSiswa}
-    `,
-    (error, result) => {
+      UPDATE siswa SET nisn = '?', namaSiswa = '?',
+      email = '?', jenisKelamin = '?',
+      tanggalLahir = '?', alamat = '?',
+      userId = ?, kelasId = ?
+      WHERE idSiswa = ?
+    `, [
+      newSiswa.nisn,
+      newSiswa.namaSiswa,
+      newSiswa.email,
+      newSiswa.jenisKelamin,
+      newSiswa.tanggalLahir,
+      newSiswa.alamat,
+      newSiswa.userId,
+      newSiswa.kelasId,
+      idSiswa
+    ], (error, result) => {
       if (error) {
         console.log(`Error updating Siswa: ${error}`);
         resultHandler(error, null);
@@ -101,7 +112,7 @@ Siswa.update = (idSiswa, newSiswa, resultHandler) => {
 
 Siswa.delete = (idSiswa, resultHandler) => {
   database.query(
-    `DELETE FROM siswa WHERE idSiswa = ${idSiswa}`,
+    "DELETE FROM siswa WHERE idSiswa = ?", [idSiswa],
     (error, result) => {
       if (error) {
         console.log(`Error deleting Siswa: ${error}`);

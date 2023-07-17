@@ -31,8 +31,8 @@ User.getById = (idUser, resultHandler) => {
     `
       SELECT idUser, username, password, namaRole as role FROM user
       JOIN role ON role.idRole = user.roleId
-      WHERE idUser = ${idUser}
-    `,
+      WHERE idUser = ?
+    `, [idUser],
     (error, result) => {
       if (error) {
         console.log(`Error querying the DB: ${error}`);
@@ -42,7 +42,7 @@ User.getById = (idUser, resultHandler) => {
 
       resultHandler(null, result);
     }
-  )
+  );
 }
 
 User.getByUsername = (username, resultHandler) => {
@@ -50,8 +50,8 @@ User.getByUsername = (username, resultHandler) => {
     `
       SELECT idUser, username, password, namaRole as role FROM user
       JOIN role ON role.idRole = user.roleId
-      WHERE username = '${username}'
-    `,
+      WHERE username = '?'
+    `, [username],
     (error, result) => {
       if (error) {
         console.log(`Error querying the DB: ${error}`);
@@ -61,7 +61,38 @@ User.getByUsername = (username, resultHandler) => {
 
       resultHandler(null, result);
     }
-  )
+  );
+}
+
+User.update = (idUser, newUser, resultHandler) => {
+  database.query(
+    `
+      UPDATE user SET username = ?, password = ?
+      WHERE idUser = ?
+    `, [newUser.username, newUser.password, idUser],
+    (error, result) => {
+      if (error) {
+        console.log(`Error updating User: ${error}`);
+        resultHandler(error, null);
+      }
+
+      resultHandler(null, result);
+    }
+  );
+}
+
+User.delete = (idUser, resultHandler) => {
+  database.query(
+      "DELETE FROM user WHERE idUser = ?", [idUser],
+      (error, result) => {
+        if (error) {
+          console.log(`Error deleting User; ${error}`);
+          resultHandler(error, null);
+        }
+
+        resultHandler(null, result);
+      }
+  );
 }
 
 export default User;
