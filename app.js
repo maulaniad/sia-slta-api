@@ -1,6 +1,7 @@
 import "dotenv/config";
 import express from "express";
 import authRouter from "./server/routes/auth.routes.js";
+import userRouter from "./server/routes/user.routes.js";
 import siswaRouter from "./server/routes/siswa.routes.js";
 
 const app = express();
@@ -13,6 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/login-sek", authRouter);
+app.use("/user", userRouter);
 app.use("/siswa", siswaRouter);
 
 app.listen(process.env.SERVER_PORT, () => {
