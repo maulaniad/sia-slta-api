@@ -26,6 +26,26 @@ User.create = (newUser, resultHandler) => {
   );
 }
 
+User.getAll = (roleFilter, resultHandler) => {
+  let sql = "SELECT idUser, username, password, roleId FROM user";
+
+  if (roleFilter) {
+    sql += ` WHERE roleId = ?`;
+  }
+
+  database.query(
+    sql, [roleFilter], (error, result) => {
+      if (error) {
+        console.log(`Error querying the DB: ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  );
+}
+
 User.getById = (idUser, resultHandler) => {
   database.query(
     `

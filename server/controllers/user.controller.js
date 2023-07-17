@@ -1,15 +1,6 @@
 import { sendFieldError } from "../helpers/error.js";
 import User from "../models/user.model.js";
-
-const convertRole = (string) => {
-  if (!string) { return 0; }
-
-  if (string.toLowerCase() === "admin") {
-    return 1;
-  }
-
-  return 0;
-}
+import { RoleFormat, convertRole } from "../helpers/role.js";
 
 const create = (req, res) => {
   if (!req.body) {
@@ -17,8 +8,7 @@ const create = (req, res) => {
   }
 
   const { username, password } = req.body;
-  const roleId = convertRole(req.body.role);
-  console.log(roleId);
+  const roleId = convertRole(req.body.role, RoleFormat.ToID);
 
   if (!username) { return sendFieldError("username", res); }
   if (!password) { return sendFieldError("password", res); }
@@ -44,19 +34,121 @@ const create = (req, res) => {
 }
 
 const findAll = (req, res) => {
+  let roleId = req.query.id;
 
+  if (roleId !== "0" && roleId !== "1") {
+    roleId = null;
+  }
+
+  User.getAll(
+    roleId, (error, result) => {
+      if (error) {
+        return res.status(500).json({ status: 500, message: `${error.message}` });
+      }
+
+      if (result.length === 0) {
+        return res.status(200).json({
+          status: 200,
+          message: "Data empty ..."
+        });
+      }
+
+      result.forEach((element) => {
+        element.roleId = convertRole(element.roleId, RoleFormat.ToString);
+      });
+
+      return res.status(200).json({
+        status: 200,
+        message: "Success!",
+        data: result
+      });
+    }
+  );
 }
 
 const findById = (req, res) => {
+  const id = req.params.id;
 
+  User.getById(id, (error, result) => {
+    if (error) {
+      return res.status(500).json({ status: 500, message: `${error.message}` });
+    }
+
+    if (result.length === 0) {
+      return res.status(200).json({ status: 200, message: "Data not found ..." });
+    }
+
+    return res.status(200).json({ status: 200, message: "Success!", data: result[0] });
+  });
 }
 
 const update = (req, res) => {
+  const id = req.params.id;
 
+  User.getById(id, (error, result) => {
+    if (error) {
+      return res.status(500).json({ status: 500, message: `${error.message}` });
+    }
+
+    if (result.length === 0) {
+      return res.status(200).json({
+        status: 200, message: "Data not found, therefore no action has been made ..."
+      });
+    }
+
+    const currentUserData = result[0];
+    const { username, password } = req.body;
+
+    const user = new User({
+      username: username,
+      password: password,
+      role: 1
+    });
+
+    User.update(id, user, (error, data) => {
+      if (error) {
+        return res.status(500).json({ status: 500, message: `${error.message}` });
+      }
+
+      return res.status(200).json({
+        status: 200,
+        message: "Success!",
+        before: currentUserData,
+        after: user,
+        records: data
+      });
+    });
+  });
 }
 
 const deleteById = (req, res) => {
-  
+  const id = req.params.id;
+
+  User.getById(id, (error, data) => {
+    if (error) {
+      return res.status(500).json({ status: 500, message: `${error.message}` });
+    }
+
+    if (data.length === 0) {
+      return res.status(404).json({
+        status: 200, message: "Data not found, therefore no action has been made ..."
+      });
+    }
+
+    const deletedUserData = data[0];
+
+    User.delete(id, (error, data) => {
+      if (error) {
+        return res.status(500).json({ status: 500, message: `${error.message}` });
+      }
+
+      return res.status(200).json({
+        status: 200, message: "Success!",
+        deletedData: deletedUserData,
+        records: data
+      });
+    });
+  });
 }
 
 export { create, findAll, findById, update, deleteById };
