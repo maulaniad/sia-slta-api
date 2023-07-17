@@ -52,6 +52,10 @@ const findAll = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
+    if (data.length === 0) {
+      return res.status(200).json({ status: 200, message: "Data empty ..." });
+    }
+
     data.forEach(
       (row) => row.tanggalLahir = convertDate(row.tanggalLahir, DateFormat.FromMysql.toString())
     );
