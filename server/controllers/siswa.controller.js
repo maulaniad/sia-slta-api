@@ -1,18 +1,10 @@
 import { DateFormat, convertDate } from "../helpers/date.js";
+import { sendFieldError } from "../helpers/error.js";
 import Siswa from "../models/siswa.model.js";
-
-const sendFieldError = (fieldName, res) => {
-  res.status(400).json(
-    {
-      status: 400,
-      message: `Field ${fieldName} cannot be empty! and All fields should use Encoded-form`
-    }
-  );
-}
 
 const create = (req, res) => {
   if (!req.body) {
-    return res.status(400).json({ status: 400, message: "Request cannot be empty!" });
+    return res.status(400).json({ status: 400, message: "No body provided ..." });
   }
 
   const {
@@ -28,14 +20,14 @@ const create = (req, res) => {
   if (!userId)       { return sendFieldError("userId", res); }
 
   const siswa = new Siswa({
-    nisn,
-    namaSiswa,
-    email,
-    jenisKelamin,
-    tanggalLahir,
-    alamat,
-    userId,
-    kelasId
+    nisn: nisn,
+    namaSiswa: namaSiswa,
+    email: email,
+    jenisKelamin: jenisKelamin,
+    tanggalLahir: tanggalLahir,
+    alamat: alamat,
+    userId: userId,
+    kelasId: kelasId
   });
 
   Siswa.create(siswa, (error, data) => {
@@ -43,7 +35,12 @@ const create = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
-    return res.status(201).json({ status: 201, message: "Success!", data: data});
+    return res.status(201).json({
+      status: 201,
+      message: "Success!",
+      data: siswa,
+      records: data
+    });
   });
 }
 
