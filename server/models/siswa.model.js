@@ -13,6 +13,19 @@ class Siswa {
   }
 }
 
+Siswa.getLinkedUserId = async (idSiswa) => {
+  return await database.promise().query(
+    "SELECT userId FROM siswa WHERE idSiswa = ?", [idSiswa],
+    (error) => {
+      if (error) {
+        return null;
+      }
+    }
+  ).then((rows) => {
+    return rows[0][0].userId;
+  });
+}
+
 Siswa.create = (newSiswa, resultHandler) => {
   const placeholders = Object.keys(newSiswa).map(() => "?").join(", ");
 
