@@ -12,7 +12,7 @@ const login = (req, res) => {
     return res.status(400).json({ status: 400, message: "Username or Password cannot be empty ..." });
   }
 
-  User.getByUsername(req.body.username, async (error, data) => {
+  User.getByUsername(req.body.username, (error, data) => {
     if (error) {
       return res.status(500).json({ status: 500, message: `Error: ${error.message}` });
     }
