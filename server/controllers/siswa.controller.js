@@ -81,8 +81,8 @@ const findById = (req, res) => {
   });
 }
 
-const update = (req, res) => {
-  let id = req.user.id;
+const update = async (req, res) => {
+  let id = await Siswa.getLinkedUserId(req.id);
 
   if (req.user.role.toLowerCase() === "admin") {
     id = req.params.id;
