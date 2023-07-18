@@ -20,5 +20,5 @@ app.use("/siswa", siswaRouter);
 app.use("/guru", guruRouter);
 
 app.listen(process.env.SERVER_PORT, () => {
-  console.log(`Express runs at http://127.0.0.1:${process.env.SERVER_PORT}`)
+  console.log(`Express runs at http://127.0.0.1:${process.env.SERVER_PORT}`);
 });
