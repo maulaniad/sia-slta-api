@@ -7,7 +7,7 @@ const siswaRouter = Router();
 
 siswaRouter.post("/", [auth, admin], create);
 siswaRouter.put("/:id", [auth, admin], update);
-siswaRouter.delete("/:id", [auth, admin], deleteById)
+siswaRouter.delete("/:id", [auth, admin], deleteById);
 siswaRouter.get("/", [auth, siswa], findAll);
 siswaRouter.get("/:id", [auth, siswa], findById);
 siswaRouter.put("/update", [auth, siswa], update);
