@@ -46,14 +46,16 @@ Siswa.create = (newSiswa, resultHandler) => {
 }
 
 Siswa.getAll = (keyword, resultHandler) => {
+  let filter = keyword;
   let sql = `SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
              alamat, userId, kelasId FROM siswa`;
-
-  if (keyword) {
-    sql += ` WHERE namaSiswa LIKE '%${keyword}%';`;
+  
+  if (filter) {
+    filter = `%${keyword}%`;
+    sql += ` WHERE namaSiswa LIKE ?`;
   }
 
-  database.query(sql, (error, result) => {
+  database.query(sql, [filter], (error, result) => {
     if (error) {
       console.log(`Error querying the DB: ${error}`);
       resultHandler(error, null);
