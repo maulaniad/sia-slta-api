@@ -152,7 +152,7 @@ const deleteById = (req, res) => {
     }
 
     if (data.length === 0) {
-      return res.status(404).json({
+      return res.status(200).json({
         status: 200, message: "Data not found, therefore no action has been made ..."
       });
     }
