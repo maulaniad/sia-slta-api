@@ -18,6 +18,6 @@ database.getConnection(
 
     console.log("DB Connection Success!");
   }
-)
+);
 
 export default database;
