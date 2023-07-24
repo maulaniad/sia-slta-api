@@ -19,7 +19,9 @@ Kelas.create = (newKelas, resultHandler) => {
         resultHandler(error, null);
       }
 
-      resultHandler(null, result);
+      const dataKelas = { id: result.insertId, ...newKelas };
+
+      resultHandler(null, dataKelas);
     }
   );
 }

@@ -21,7 +21,9 @@ User.create = (newUser, resultHandler) => {
         return;
       }
 
-      resultHandler(null, result);
+      const dataUser = { id: result.insertId, ...newUser };
+
+      resultHandler(null, dataUser);
     }
   );
 }

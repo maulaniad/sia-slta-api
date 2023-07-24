@@ -21,7 +21,9 @@ Absensi.create = (newAbsensi, resultHandler) => {
         return;
       }
 
-      resultHandler(null, result);
+      const dataAbsensi = { id: result.insertId, ...newAbsensi };
+
+      resultHandler(null, dataAbsensi);
     }
   );
 }

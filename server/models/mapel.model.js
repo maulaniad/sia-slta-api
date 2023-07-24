@@ -20,7 +20,9 @@ Mapel.create = (mapel, resultHandler) => {
         resultHandler(error, null);
       }
 
-      resultHandler(null, result);
+      const dataMapel = { id: result.insertId, ...mapel };
+
+      resultHandler(null, dataMapel);
     }
   );
 }
