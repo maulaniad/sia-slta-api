@@ -7,25 +7,25 @@ const create = (req, res) => {
   }
 
   const {
-    tmt, tmtt, uts, uas, siswaId, guruId, mapelId
+    tmt, tmtt, uts, uas, idSiswa, idGuru, idMapel
   } = req.body;
 
   if (!tmt)     { return sendFieldError("tmt", res); }
   if (!tmtt)    { return sendFieldError("tmtt", res); }
   if (!uts)     { return sendFieldError("uts", res); }
   if (!uas)     { return sendFieldError("uas", res); }
-  if (!siswaId) { return sendFieldError("siswaId", res); }
-  if (!guruId)  { return sendFieldError("guruId", res); }
-  if (!mapelId) { return sendFieldError("mapelId", res); }
+  if (!idSiswa) { return sendFieldError("idSiswa", res); }
+  if (!idGuru)  { return sendFieldError("idGuru", res); }
+  if (!idMapel) { return sendFieldError("idMapel", res); }
 
   const nilai = new Nilai({
     tmt: tmt,
     tmtt: tmtt,
     uts: uts,
     uas: uas,
-    siswaId: siswaId,
-    guruId: guruId,
-    mapelId: mapelId,
+    siswaId: idSiswa,
+    guruId: idGuru,
+    mapelId: idMapel,
   });
 
   Nilai.create(nilai, (error, data) => {
@@ -71,7 +71,7 @@ const findById = (req, res) => {
 }
 
 const update = (req, res) => {
-  const { idSiswa, idMapel, idSemester } = req.body;
+  const { idSiswa, idMapel } = req.body;
 
   if (!idSiswa) { return sendFieldError("idSiswa", res); }
   if (!idMapel) { return sendFieldError("idMapel", res); }
@@ -96,23 +96,22 @@ const update = (req, res) => {
       siswaId: currentNilaiData.siswaId,
       guruId: currentNilaiData.guruId,
       mapelId: currentNilaiData.mapelId,
-      kelasId: currentNilaiData.kelasId
     });
 
     const {
-      tmt, tmtt, uts, uas, siswaId, guruId, mapelId, kelasId
+      tmt, tmtt, uts, uas, idSiswa, idGuru, idMapel, idKelas
     } = req.body;
   
     if (tmt)     { newData.tmt = tmt; }
     if (tmtt)    { newData.tmtt = tmtt; }
     if (uts)     { newData.uts = uts; }
     if (uas)     { newData.uas = uas; }
-    if (siswaId) { newData.siswaId = siswaId; }
-    if (guruId)  { newData.guruId = guruId; }
-    if (mapelId) { newData.mapelId = mapelId; }
-    if (kelasId) { newData.kelasId = kelasId; }
+    if (idSiswa) { newData.siswaId = idSiswa; }
+    if (idGuru)  { newData.guruId = idGuru; }
+    if (idMapel) { newData.mapelId = idMapel; }
+    if (idKelas) { newData.kelasId = idKelas; }
 
-    Nilai.update(idSiswa, idMapel, idSemester, newData, (error, data) => {
+    Nilai.update(idSiswa, idMapel, newData, (error, data) => {
       if (error) {
         return res.status(500).json({ status: 500, message: `${error.message}` });
       }
@@ -130,9 +129,9 @@ const update = (req, res) => {
 }
 
 const deleteByIds = (req, res) => {
-  const { idSiswa, idMapel, idSemester } = req.body;
+  const { idSiswa, idMapel } = req.body;
 
-  Nilai.getByIds(idSiswa, idMapel, idSemester, (error, data) => {
+  Nilai.getByIds(idSiswa, idMapel, (error, data) => {
     if (error) {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
@@ -145,7 +144,7 @@ const deleteByIds = (req, res) => {
 
     const deletedData = data[0];
 
-    Nilai.delete(idSiswa, idMapel, idSemester, (error, data) => {
+    Nilai.delete(idSiswa, idMapel, (error, data) => {
       if (error) {
         return res.status(500).json({ status: 500, message: `${error.message}` });
       }

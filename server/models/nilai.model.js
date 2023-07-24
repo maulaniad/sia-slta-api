@@ -9,7 +9,6 @@ class Nilai {
     this.siswaId = nilai.siswaId;
     this.guruId = nilai.guruId;
     this.mapelId = nilai.mapelId;
-    this.semesterId = nilai.semesterId;
   }
 }
 
@@ -19,7 +18,7 @@ Nilai.create = (newNilai, resultHandler) => {
   database.query(
     `
       INSERT INTO nilai (
-        tmt, tmtt, email, uts, uas, siswaId,
+        tmt, tmtt, uts, uas, siswaId,
         guruId, mapelId
       ) VALUES (${placeholders})
     `, [
@@ -133,14 +132,14 @@ Nilai.getById = (idSiswa, resultHandler) => {
   );
 }
 
-Nilai.getByIds = (idSiswa, idMapel, idSemester, resultHandler) => {
+Nilai.getByIds = (idSiswa, idMapel, resultHandler) => {
   database.query(
     `SELECT tmt, tmtt, uts, uas, namaSiswa, namaMapel
      FROM nilai
      JOIN siswa ON siswa.idSiswa = nilai.siswaId
      JOIN mapel ON mapel.idMapel = nilai.mapelId
-     WHERE siswaId = ? AND mapelId = ? AND semesterId = ?
-     `, [idSiswa, idMapel, idSemester],
+     WHERE siswaId = ? AND mapelId = ?
+     `, [idSiswa, idMapel],
     (error, result) => {
       if (error) {
         console.log(`Error querying the DB: ${error}`);
@@ -153,12 +152,12 @@ Nilai.getByIds = (idSiswa, idMapel, idSemester, resultHandler) => {
   );
 }
 
-Nilai.update = (idSiswa, idMapel, idSemester, newNilai, resultHandler) => {
+Nilai.update = (idSiswa, idMapel, newNilai, resultHandler) => {
   database.query(
     `
       UPDATE nilai SET tmt = ?, tmtt = ?,
-      uts = ?, uas = ?,
-      WHERE siswaId = ? AND mapelId = ? AND semesterId = ?
+      uts = ?, uas = ?
+      WHERE siswaId = ? AND mapelId = ?
     `, [
       newNilai.tmt,
       newNilai.tmtt,
@@ -166,7 +165,6 @@ Nilai.update = (idSiswa, idMapel, idSemester, newNilai, resultHandler) => {
       newNilai.uas,
       idSiswa,
       idMapel,
-      idSemester
     ],
     (error, result) => {
       if (error) {
@@ -182,7 +180,7 @@ Nilai.update = (idSiswa, idMapel, idSemester, newNilai, resultHandler) => {
 
 Nilai.delete = (idSiswa, idMapel, resultHandler) => {
   database.query(
-    "DELETE FROM nilai WHERE idSiswa = ? AND idMapel = ?", [idSiswa, idMapel],
+    "DELETE FROM nilai WHERE siswaId = ? AND mapelId = ?", [idSiswa, idMapel],
     (error, result) => {
       if (error) {
         console.log(`Error deleting Nilai: ${error}`);
