@@ -75,7 +75,7 @@ const findById = (req, res) => {
 }
 
 const update = (req, res) => {
-  const id = req.params.id
+  const id = req.params.id;
 
   Guru.getById(id, (error, data) => {
     if (error) {
