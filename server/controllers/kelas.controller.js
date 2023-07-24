@@ -13,7 +13,7 @@ const create = (req, res) => {
 
   const kelas = new Kelas({
     namaKelas: namaKelas,
-    idKonsentrasi: idKonsentrasi
+    konsentrasiId: idKonsentrasi
   });
 
   Kelas.create(kelas, (error, result) => {
@@ -31,8 +31,9 @@ const create = (req, res) => {
 }
 
 const findAll = (req, res) => {
-  Kelas.getAll(
-    (error, result) => {
+  const keyword = req.query.keyword;
+
+  Kelas.getAll(keyword, (error, result) => {
       if (error) {
         return res.status(500).json({ status: 500, message: `${error.message}` });
       }
@@ -88,7 +89,7 @@ const update = (req, res) => {
 
     const kelas = new Kelas({
       namaKelas: namaKelas,
-      idKonsentrasi: idKonsentrasi,
+      konsentrasiId: idKonsentrasi,
     });
 
     Kelas.update(id, kelas, (error, data) => {

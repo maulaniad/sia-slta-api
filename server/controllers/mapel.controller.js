@@ -6,20 +6,20 @@ const create = (req, res) => {
     return res.status(400).json({ status: 400, message: "No body provided ..." });
   }
 
-  const { namaMapel, jam, hari, kelasId, semesterId } = req.body;
+  const { namaMapel, jam, hari, idKelas, idSemester } = req.body;
 
-  if (!namaMapel) { return sendFieldError("namaMapel", res); }
-  if (!jam)       { return sendFieldError("jam", res); }
-  if (!hari)      { return sendFieldError("hari", res); }
-  if (!kelasId)      { return sendFieldError("hari", res); }
-  if (!semesterId)      { return sendFieldError("hari", res); }
+  if (!namaMapel)  { return sendFieldError("namaMapel", res); }
+  if (!jam)        { return sendFieldError("jam", res); }
+  if (!hari)       { return sendFieldError("hari", res); }
+  if (!idKelas)    { return sendFieldError("idKelas", res); }
+  if (!idSemester) { return sendFieldError("idSemester", res); }
 
   const mapel = new Mapel({
     namaMapel: namaMapel,
     jam: jam,
     hari: hari,
-    kelasId: kelasId,
-    semesterId: semesterId
+    kelasId: idKelas,
+    semesterId: idSemester
   });
 
   Mapel.create(mapel, (error, data) => {
@@ -78,14 +78,14 @@ const update = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
-    const { namaMapel, jam, hari, kelasId, semesterId } = req.body;
+    const { namaMapel, jam, hari, idKelas, idSemester } = req.body;
     const currentMapelData = result[0];
     const newMapel = new Mapel({
       namaMapel: namaMapel,
       jam: jam,
       hari: hari,
-      kelasId: kelasId,
-      semesterId: semesterId
+      kelasId: idKelas,
+      semesterId: idSemester
     });
 
     if (!namaMapel) { newMapel.namaMapel = currentMapelData.namaMapel }

@@ -14,8 +14,8 @@ Mapel.create = (mapel, resultHandler) => {
   database.query(
     `
       INSERT INTO mapel (namaMapel, jam, hari, kelasId, semesterId)
-      VALUES (?, ?, ?)
-    `, [mapel.namaMapel, mapel.jam, mapel.hari],
+      VALUES (?, ?, ?, ?, ?)
+    `, [mapel.namaMapel, mapel.jam, mapel.hari, mapel.kelasId, mapel.semesterId],
     (error, result) => {
       if (error) {
         console.log(`Error creating Mapel: ${error}`);
@@ -65,7 +65,14 @@ Mapel.update = (idMapel, newMapel, resultHandler) => {
       UPDATE mapel SET namaMapel = ?,
       jam = ?, hari = ?, kelasId = ?, semesterId = ?
       WHERE idMapel = ?
-    `, [newMapel.namaMapel, newMapel.jam, newMapel.hari, idMapel],
+    `, [
+      newMapel.namaMapel,
+      newMapel.jam,
+      newMapel.hari,
+      newMapel.kelasId,
+      newMapel.semesterId,
+      idMapel
+    ],
     (error, result) => {
       if (error) {
         console.log(`Error updating Mapel: ${error}`);
