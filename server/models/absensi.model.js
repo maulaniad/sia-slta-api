@@ -44,12 +44,30 @@ Absensi.getAll = (idSiswa, resultHandler) => {
   );
 }
 
-Absensi.update = (idAbsensi, newAbsensi, resultHandler) => {
+Absensi.getByDate = (tanggal, resultHandler) => {
+  database.query(
+    `
+      SELECT tanggal, statusHadir, siswaId FROM absensi
+      WHERE tanggal = ?
+    `, [tanggal],
+    (error, result) => {
+      if (error) {
+        console.log(`Error querying the DB: ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  );
+}
+
+Absensi.update = (tanggal, newAbsensi, resultHandler) => {
   database.query(
     `
       UPDATE absensi SET tanggal = ?, statusHadir = ?
-      WHERE idAbsensi = ?
-    `, [newAbsensi.tanggal, newAbsensi.statusHadir, idAbsensi],
+      WHERE tanggal = ?
+    `, [newAbsensi.tanggal, newAbsensi.statusHadir, tanggal],
     (error, result) => {
       if (error) {
         console.log(`Error updating Absensi: ${error}`);
