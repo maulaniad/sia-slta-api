@@ -13,16 +13,21 @@ class Siswa {
   }
 }
 
-Siswa.getLinkedUserId = async (idSiswa) => {
+Siswa.getLinkedUserId = async (idUser) => {
+  console.log(idUser);
   return await database.promise().query(
-    "SELECT userId FROM siswa WHERE idSiswa = ?", [idSiswa],
+    "SELECT idSiswa FROM siswa WHERE userId = ?", [idUser],
     (error) => {
       if (error) {
         return null;
       }
     }
   ).then((rows) => {
-    return rows[0][0].userId;
+    if (rows.length === 0) {
+      return null;
+    }
+
+    return rows[0][0].userId
   });
 }
 

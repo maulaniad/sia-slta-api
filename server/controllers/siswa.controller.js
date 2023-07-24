@@ -82,7 +82,7 @@ const findById = (req, res) => {
 }
 
 const update = async (req, res) => {
-  let id = await Siswa.getLinkedUserId(req.id);
+  let id = await Siswa.getLinkedUserId(req.user.id);
 
   if (req.user.role.toLowerCase() === "admin") {
     id = req.params.id;
@@ -114,7 +114,7 @@ const update = async (req, res) => {
     });
 
     const {
-      nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat, userId, kelasId
+      nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat, idUser, idKelas
     } = req.body;
   
     if (nisn)         { newData.nisn = nisn; }
@@ -123,8 +123,8 @@ const update = async (req, res) => {
     if (jenisKelamin) { newData.jenisKelamin = jenisKelamin; }
     if (tanggalLahir) { newData.tanggalLahir = tanggalLahir; }
     if (alamat)       { newData.alamat = alamat; }
-    if (userId)       { newData.userId = userId; }
-    if (kelasId)      { newData.kelasId = kelasId; }
+    if (idUser)       { newData.userId = idUser; }
+    if (idKelas)      { newData.kelasId = idKelas; }
 
     Siswa.update(id, newData, (error, data) => {
       if (error) {
