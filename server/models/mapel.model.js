@@ -5,13 +5,15 @@ class Mapel {
     this.namaMapel = mapel.namaMapel;
     this.jam = mapel.jam;
     this.hari = mapel.hari;
+    this.kelasId = mapel.kelasId;
+    this.semesterId = mapel.semesterId;
   }
 }
 
 Mapel.create = (mapel, resultHandler) => {
   database.query(
     `
-      INSERT INTO mapel (namaMapel, jam, hari)
+      INSERT INTO mapel (namaMapel, jam, hari, kelasId, semesterId)
       VALUES (?, ?, ?)
     `, [mapel.namaMapel, mapel.jam, mapel.hari],
     (error, result) => {
@@ -61,7 +63,7 @@ Mapel.update = (idMapel, newMapel, resultHandler) => {
   database.query(
     `
       UPDATE mapel SET namaMapel = ?,
-      jam = ?, hari = ? FROM mapel
+      jam = ?, hari = ?, kelasId = ?, semesterId = ?
       WHERE idMapel = ?
     `, [newMapel.namaMapel, newMapel.jam, newMapel.hari, idMapel],
     (error, result) => {
