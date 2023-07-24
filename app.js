@@ -7,6 +7,7 @@ import guruRouter from "./server/routes/guru.routes.js";
 import mapelRouter from "./server/routes/mapel.routes.js";
 import kelasRouter from "./server/routes/kelas.routes.js";
 import absensiRouter from "./server/routes/absensi.routes.js";
+import nilaiRouter from "./server/routes/nilai.routes.js";
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use("/guru", guruRouter);
 app.use("/mapel", mapelRouter);
 app.use("/kelas", kelasRouter);
 app.use("/absensi", absensiRouter);
+app.use("/nilai", nilaiRouter);
 
 app.listen(process.env.SERVER_PORT, () => {
   console.log(`Express runs at http://127.0.0.1:${process.env.SERVER_PORT}`);
