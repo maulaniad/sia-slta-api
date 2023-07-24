@@ -1,0 +1,1239 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "SIA-SLTA-API",
+    "dateExported": "2023-07-24T10:30:33.916Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
+            "name": "User",
+            "containerId": "",
+            "created": "2023-07-18T06:50:22.025Z",
+            "sortNum": 1250
+        },
+        {
+            "_id": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa",
+            "containerId": "",
+            "created": "2023-07-18T06:49:26.977Z",
+            "sortNum": 2500
+        },
+        {
+            "_id": "58277b71-4d75-482b-aa53-03cf005dfc61",
+            "name": "Guru",
+            "containerId": "",
+            "created": "2023-07-18T07:54:54.376Z",
+            "sortNum": 5000
+        },
+        {
+            "_id": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas",
+            "containerId": "",
+            "created": "2023-07-24T08:37:07.621Z",
+            "sortNum": 5312.5
+        },
+        {
+            "_id": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
+            "name": "Mapel",
+            "containerId": "",
+            "created": "2023-07-24T08:36:45.932Z",
+            "sortNum": 5625
+        },
+        {
+            "_id": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
+            "name": "Absensi",
+            "containerId": "",
+            "created": "2023-07-24T08:36:32.413Z",
+            "sortNum": 6875
+        },
+        {
+            "_id": "8bb60dfe-15b6-40fc-8410-35b23ab2c397",
+            "name": "Nilai",
+            "containerId": "",
+            "created": "2023-07-24T08:36:56.068Z",
+            "sortNum": 7500
+        }
+    ],
+    "requests": [
+        {
+            "_id": "78467559-37dd-4252-ab54-72ae906f97f1",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
+            "name": "User - Create",
+            "url": "localhost:8080/user",
+            "method": "POST",
+            "sortNum": 5000,
+            "created": "2023-07-18T06:49:16.945Z",
+            "modified": "2023-07-18T06:53:51.669Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "jericho"
+                    },
+                    {
+                        "name": "password",
+                        "value": "jericho"
+                    },
+                    {
+                        "name": "role",
+                        "value": "ADMIN"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "8eeb67c9-a591-4726-b002-74492766aa91",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
+            "name": "User - Read All",
+            "url": "localhost:8080/user",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2023-07-18T06:55:37.830Z",
+            "modified": "2023-07-18T06:55:56.117Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a99b86cd-ae97-4c2c-a788-80bc42ebdec5",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa - Create",
+            "url": "localhost:8080/siswa",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-18T04:05:40.126Z",
+            "modified": "2023-07-18T06:28:03.179Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjUyOTA0LCJleHAiOjE2ODk3MzkzMDR9.FT_rp2beDpw6vEOuMvP6rGwN-0LABF6Ap0USp_vro8M"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nisn",
+                        "value": "123456777"
+                    },
+                    {
+                        "name": "namaSiswa",
+                        "value": "John Elden Ring"
+                    },
+                    {
+                        "name": "email",
+                        "value": "john@eldenring.com"
+                    },
+                    {
+                        "name": "jenisKelamin",
+                        "value": "Laki-laki"
+                    },
+                    {
+                        "name": "tanggalLahir",
+                        "value": "2000-08-28"
+                    },
+                    {
+                        "name": "alamat",
+                        "value": "Fringefolk Hero's Grave, Jl. The First Step, Limgrave"
+                    },
+                    {
+                        "name": "userId",
+                        "value": "0"
+                    },
+                    {
+                        "name": "kelasId",
+                        "value": "null",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "b9a02aeb-4828-4374-84ba-2ca11b58daf8",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
+            "name": "User - Read All Filtered",
+            "url": "localhost:8080/user?id=1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-18T06:49:09.241Z",
+            "modified": "2023-07-18T06:56:19.163Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                }
+            ],
+            "params": [
+                {
+                    "name": "id",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "b51d05db-cb44-4403-8fdb-b596f1f0e7a6",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa - Read All",
+            "url": "localhost:8080/siswa",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-07-18T04:03:04.356Z",
+            "modified": "2023-07-24T08:59:26.696Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "44ef927a-c1ed-4972-ad3c-2d744560f6bb",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa - Read All Filtered",
+            "url": "localhost:8080/siswa?keyword=Mameng",
+            "method": "GET",
+            "sortNum": 25000,
+            "created": "2023-07-18T06:56:45.760Z",
+            "modified": "2023-07-18T06:57:12.466Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjUyOTA0LCJleHAiOjE2ODk3MzkzMDR9.FT_rp2beDpw6vEOuMvP6rGwN-0LABF6Ap0USp_vro8M"
+                }
+            ],
+            "params": [
+                {
+                    "name": "keyword",
+                    "value": "Mameng",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "d207e4e4-545b-4110-9192-385fc3fadbf9",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa - Read One",
+            "url": "localhost:8080/siswa/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-07-18T04:04:57.037Z",
+            "modified": "2023-07-19T14:16:46.311Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Nzc2MTI1LCJleHAiOjE2ODk4NjI1MjV9.4FbRpnS77kGa_h5J5zbDxwbEjSoyusvpb7o-x9xCcOE"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "28474423-1226-4450-81ad-08982f13f914",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa - Update",
+            "url": "localhost:8080/siswa/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-07-18T04:12:07.523Z",
+            "modified": "2023-07-18T04:15:39.561Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjUyOTA0LCJleHAiOjE2ODk3MzkzMDR9.FT_rp2beDpw6vEOuMvP6rGwN-0LABF6Ap0USp_vro8M"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nisn",
+                        "value": "999999999"
+                    },
+                    {
+                        "name": "namaSiswa",
+                        "value": "Sekiro"
+                    },
+                    {
+                        "name": "email",
+                        "value": "sekiro@shadowsdietwice.com"
+                    },
+                    {
+                        "name": "jenisKelamin",
+                        "value": "Laki-laki"
+                    },
+                    {
+                        "name": "tanggalLahir",
+                        "value": "1997-07-17"
+                    },
+                    {
+                        "name": "alamat",
+                        "value": "Ashina, Japan"
+                    },
+                    {
+                        "name": "kelasId",
+                        "value": "null",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fcc49045-be76-49a8-a451-2f50ef5e4220",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
+            "name": "Guru - Create",
+            "url": "localhost:8080/guru",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-07-18T13:54:31.051Z",
+            "modified": "2023-07-18T13:59:42.685Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nip",
+                        "value": "997722123"
+                    },
+                    {
+                        "name": "namaGuru",
+                        "value": "Tommy Shelby"
+                    },
+                    {
+                        "name": "email",
+                        "value": "thomas@shelbycompany.com"
+                    },
+                    {
+                        "name": "jenisKelamin",
+                        "value": "Laki-laki"
+                    },
+                    {
+                        "name": "tanggalLahir",
+                        "value": "1902-12-04"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0b3c533d-42e6-47bf-80e5-7744cfcf14d1",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "8bb60dfe-15b6-40fc-8410-35b23ab2c397",
+            "name": "Nilai - Create",
+            "url": "localhost:8080/nilai/",
+            "method": "POST",
+            "sortNum": 47500,
+            "created": "2023-07-24T08:58:15.813Z",
+            "modified": "2023-07-24T09:22:33.055Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tmt",
+                        "value": "75"
+                    },
+                    {
+                        "name": "tmtt",
+                        "value": "80"
+                    },
+                    {
+                        "name": "uts",
+                        "value": "75"
+                    },
+                    {
+                        "name": "uas",
+                        "value": "70"
+                    },
+                    {
+                        "name": "idSiswa",
+                        "value": "3"
+                    },
+                    {
+                        "name": "idGuru",
+                        "value": "2"
+                    },
+                    {
+                        "name": "idMapel",
+                        "value": "1"
+                    },
+                    {
+                        "name": "idSemester",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f64f817a-cca6-4fcb-8506-74759d09f96e",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa - Update Own",
+            "url": "localhost:8080/siswa/update",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-07-18T04:16:41.526Z",
+            "modified": "2023-07-18T05:43:32.656Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6IlNJU1dBIiwiaWF0IjoxNjg5NjU1ODc1LCJleHAiOjE2ODk3NDIyNzV9.N0AftfOKIbjRpFET9snwm79JSWdVC3sfO07lX1vGq54"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nisn",
+                        "value": "777666555"
+                    },
+                    {
+                        "name": "namaSiswa",
+                        "value": "Sekiro Lone Wolf"
+                    },
+                    {
+                        "name": "email",
+                        "value": "sekiro@shadowsdietwice.com"
+                    },
+                    {
+                        "name": "jenisKelamin",
+                        "value": "Laki-laki"
+                    },
+                    {
+                        "name": "tanggalLahir",
+                        "value": "1999-09-19"
+                    },
+                    {
+                        "name": "alamat",
+                        "value": "Ashina, Japan"
+                    },
+                    {
+                        "name": "kelasId",
+                        "value": "null",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9c879eb0-2c8d-4759-bbe7-71d0f986919e",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "",
+            "name": "Auth - Login",
+            "url": "localhost:8080/login-sek",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-07-18T04:00:55.339Z",
+            "modified": "2023-07-18T06:28:37.500Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "galuh"
+                    },
+                    {
+                        "name": "password",
+                        "value": "00000"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "cbcce35a-bbc7-406a-8780-de6772067d6f",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
+            "name": "Siswa - Delete",
+            "url": "localhost:8080/siswa/7",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-07-18T06:27:11.223Z",
+            "modified": "2023-07-18T06:28:50.405Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYxNzE3LCJleHAiOjE2ODk3NDgxMTd9.nmI23FIFF1FacsVFr0o23Ht3qpJRhhRJl4JHypCp5iI"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c216e0bd-335c-4ff9-a109-3cc05321ae47",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
+            "name": "User - Read One",
+            "url": "localhost:8080/user/4",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2023-07-18T06:51:38.234Z",
+            "modified": "2023-07-18T06:58:37.730Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5a717c7a-40d6-4683-bf33-b97335337790",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
+            "name": "Guru - Read All",
+            "url": "localhost:8080/guru",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2023-07-18T13:54:47.618Z",
+            "modified": "2023-07-24T08:59:53.947Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f2eab023-5e8e-45c4-a54e-3bdd8a31d6bf",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
+            "name": "Guru - Read All Filtered",
+            "url": "localhost:8080/guru?keyword=john",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-07-18T13:55:58.369Z",
+            "modified": "2023-07-18T13:56:31.544Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                }
+            ],
+            "params": [
+                {
+                    "name": "keyword",
+                    "value": "john",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "f7d11a21-3cf9-4ec5-9bbc-5e1a2ca6f916",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
+            "name": "Guru - Read One",
+            "url": "localhost:8080/guru/3",
+            "method": "GET",
+            "sortNum": 95000,
+            "created": "2023-07-18T14:01:44.801Z",
+            "modified": "2023-07-18T14:01:57.271Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "9e725ee6-239e-4a94-ace7-74d3dcb1f031",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "8bb60dfe-15b6-40fc-8410-35b23ab2c397",
+            "name": "Nilai - Read All (Per Kelas)",
+            "url": "localhost:8080/nilai/1",
+            "method": "GET",
+            "sortNum": 95000,
+            "created": "2023-07-24T08:57:09.301Z",
+            "modified": "2023-07-24T08:57:32.660Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a9b7fd40-6705-44e8-9285-2fa3c7522015",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
+            "name": "Guru - Update",
+            "url": "localhost:8080/guru/4",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2023-07-18T13:58:50.469Z",
+            "modified": "2023-07-18T14:00:17.707Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "nip",
+                        "value": "997722444"
+                    },
+                    {
+                        "name": "namaGuru",
+                        "value": "Arthur Shelby"
+                    },
+                    {
+                        "name": "email",
+                        "value": "arthur@shelbycompany.com"
+                    },
+                    {
+                        "name": "jenisKelamin",
+                        "value": "Laki-laki"
+                    },
+                    {
+                        "name": "tanggalLahir",
+                        "value": "1899-01-22"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4b995a8f-d066-4ed5-bde6-6bedf3340ca8",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
+            "name": "User - Update",
+            "url": "localhost:8080/user/1",
+            "method": "PUT",
+            "sortNum": 107500,
+            "created": "2023-07-18T07:49:23.018Z",
+            "modified": "2023-07-18T07:50:03.171Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "username",
+                        "value": "maximillian"
+                    },
+                    {
+                        "name": "password",
+                        "value": "12345"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "f3b99f77-59a9-4be0-9b1a-0d7bd93f0477",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
+            "name": "Mapel - Create",
+            "url": "localhost:8080/mapel",
+            "method": "POST",
+            "sortNum": 135000,
+            "created": "2023-07-24T09:54:24.643Z",
+            "modified": "2023-07-24T09:58:35.122Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "namaMapel",
+                        "value": "Astrologi"
+                    },
+                    {
+                        "name": "jam",
+                        "value": "1"
+                    },
+                    {
+                        "name": "hari",
+                        "value": "Senin"
+                    },
+                    {
+                        "name": "idKelas",
+                        "value": "4"
+                    },
+                    {
+                        "name": "idSemester",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "4327a857-8dd2-4bc8-b1c9-abf1d49a6456",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
+            "name": "User - Delete",
+            "url": "localhost:8080/user/10",
+            "method": "DELETE",
+            "sortNum": 150000,
+            "created": "2023-07-18T06:52:15.803Z",
+            "modified": "2023-07-18T07:53:07.429Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cb27b039-90cb-41cb-89e5-7e6a5eebcd3d",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
+            "name": "Guru - Delete",
+            "url": "localhost:8080/guru/4",
+            "method": "DELETE",
+            "sortNum": 180000,
+            "created": "2023-07-18T14:00:42.511Z",
+            "modified": "2023-07-18T14:01:02.772Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c10641dc-db5a-4faa-b99c-46dd0561735f",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "8bb60dfe-15b6-40fc-8410-35b23ab2c397",
+            "name": "Nilai - Read One",
+            "url": "localhost:8080/nilai/siswa/1",
+            "method": "GET",
+            "sortNum": 190000,
+            "created": "2023-07-24T08:55:26.350Z",
+            "modified": "2023-07-24T08:56:32.413Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1cd0e5c7-cd77-4d12-b205-072a56c39ecb",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "8bb60dfe-15b6-40fc-8410-35b23ab2c397",
+            "name": "Nilai - Update",
+            "url": "localhost:8080/nilai/",
+            "method": "PUT",
+            "sortNum": 220000,
+            "created": "2023-07-24T09:17:44.431Z",
+            "modified": "2023-07-24T09:21:44.868Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "idSiswa",
+                        "value": "2"
+                    },
+                    {
+                        "name": "idMapel",
+                        "value": "1"
+                    },
+                    {
+                        "name": "tmt",
+                        "value": "90"
+                    },
+                    {
+                        "name": "tmtt",
+                        "value": "70"
+                    },
+                    {
+                        "name": "uts",
+                        "value": "80"
+                    },
+                    {
+                        "name": "uas",
+                        "value": "95",
+                        "isDisabled": true
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "0aa90caf-259c-41cf-bf10-392abe0bc420",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "8bb60dfe-15b6-40fc-8410-35b23ab2c397",
+            "name": "Nilai - Delete",
+            "url": "localhost:8080/nilai/",
+            "method": "DELETE",
+            "sortNum": 230000,
+            "created": "2023-07-24T09:22:12.963Z",
+            "modified": "2023-07-24T09:23:01.583Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "idSiswa",
+                        "value": "3"
+                    },
+                    {
+                        "name": "idMapel",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "2e7acc7d-6b3c-435e-96cb-0df1ff87ab98",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Create",
+            "url": "localhost:8080/kelas/",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2023-07-24T09:36:05.438Z",
+            "modified": "2023-07-24T09:36:53.645Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "namaKelas",
+                        "value": "X MIA 4"
+                    },
+                    {
+                        "name": "idKonsentrasi",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "48970a7e-450b-48f3-9097-037cd17625c7",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Read All",
+            "url": "localhost:8080/kelas/",
+            "method": "GET",
+            "sortNum": 250000,
+            "created": "2023-07-24T09:38:38.160Z",
+            "modified": "2023-07-24T09:41:26.066Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "30745334-5348-40b9-afb0-421bf9fa8db1",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Read All Filtered",
+            "url": "localhost:8080/kelas/?keyword=IIS",
+            "method": "GET",
+            "sortNum": 260000,
+            "created": "2023-07-24T09:40:57.435Z",
+            "modified": "2023-07-24T09:41:31.192Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [
+                {
+                    "name": "keyword",
+                    "value": "IIS",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "1981620f-ab4d-4fcf-b542-ab4db78eb128",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Delete",
+            "url": "localhost:8080/kelas/10",
+            "method": "DELETE",
+            "sortNum": 260000,
+            "created": "2023-07-24T09:45:21.708Z",
+            "modified": "2023-07-24T09:46:40.381Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d160876e-be8c-4728-a29e-c5eb90e4da5c",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Read Siswa (Per Kelas)",
+            "url": "localhost:8080/kelas/1",
+            "method": "GET",
+            "sortNum": 265000,
+            "created": "2023-07-24T09:42:16.704Z",
+            "modified": "2023-07-24T09:43:02.485Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4a7325ee-1158-4d3e-9e71-eb59f6ce9cb6",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Update",
+            "url": "localhost:8080/kelas/1",
+            "method": "PUT",
+            "sortNum": 270000,
+            "created": "2023-07-24T09:41:48.808Z",
+            "modified": "2023-07-24T09:46:16.048Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "namaKelas",
+                        "value": "X MIA 1"
+                    },
+                    {
+                        "name": "idKonsentrasi",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "9f8ae4fe-19e5-497b-9fa3-faf2999656d6",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
+            "name": "Mapel - Read All",
+            "url": "localhost:8080/mapel",
+            "method": "GET",
+            "sortNum": 270000,
+            "created": "2023-07-24T09:53:30.235Z",
+            "modified": "2023-07-24T09:53:50.114Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "abcd1dc3-4bae-4835-aca9-dc69c8fa7a4f",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
+            "name": "Mapel - Read One",
+            "url": "localhost:8080/mapel/1",
+            "method": "GET",
+            "sortNum": 280000,
+            "created": "2023-07-24T09:54:02.922Z",
+            "modified": "2023-07-24T09:54:14.421Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "25320770-9e5f-42ad-8d21-a9caa6bd4cdc",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
+            "name": "Mapel - Update",
+            "url": "localhost:8080/mapel/31",
+            "method": "PUT",
+            "sortNum": 290000,
+            "created": "2023-07-24T09:59:05.196Z",
+            "modified": "2023-07-24T10:06:21.572Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "namaMapel",
+                        "value": "Astral Magic"
+                    },
+                    {
+                        "name": "jam",
+                        "value": "1"
+                    },
+                    {
+                        "name": "hari",
+                        "value": "Senin"
+                    },
+                    {
+                        "name": "idKelas",
+                        "value": "4"
+                    },
+                    {
+                        "name": "idSemester",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "3c96b7bb-eca2-4e61-a74f-1acbdafc8067",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
+            "name": "Absensi - Create",
+            "url": "localhost:8080/absensi",
+            "method": "POST",
+            "sortNum": 290000,
+            "created": "2023-07-24T10:19:42.127Z",
+            "modified": "2023-07-24T10:21:28.794Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tanggal",
+                        "value": "2023-07-24"
+                    },
+                    {
+                        "name": "statusHadir",
+                        "value": "Hadir"
+                    },
+                    {
+                        "name": "idSiswa",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "fc561ab1-d5e1-4ac2-99a5-26289e2dd7c0",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
+            "name": "Absensi - Read All (Per Siswa)",
+            "url": "localhost:8080/absensi/1",
+            "method": "GET",
+            "sortNum": 295000,
+            "created": "2023-07-24T10:26:29.201Z",
+            "modified": "2023-07-24T10:26:56.564Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tanggal",
+                        "value": "2023-07-24"
+                    },
+                    {
+                        "name": "statusHadir",
+                        "value": "Hadir"
+                    },
+                    {
+                        "name": "idSiswa",
+                        "value": "1"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "60414793-7851-4448-a4cc-dac2e0ac4f90",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
+            "name": "Mapel - Delete",
+            "url": "localhost:8080/mapel/31",
+            "method": "DELETE",
+            "sortNum": 300000,
+            "created": "2023-07-24T10:10:28.639Z",
+            "modified": "2023-07-24T10:10:56.037Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f738c154-80ed-411c-9fad-b9bbaaf81f90",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
+            "name": "Absensi - Update",
+            "url": "localhost:8080/absensi/1",
+            "method": "PUT",
+            "sortNum": 300000,
+            "created": "2023-07-24T10:21:42.051Z",
+            "modified": "2023-07-24T10:26:24.634Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tanggal",
+                        "value": "2023-07-24"
+                    },
+                    {
+                        "name": "statusHadir",
+                        "value": "Hadir"
+                    }
+                ]
+            },
+            "tests": []
+        }
+    ]
+}
