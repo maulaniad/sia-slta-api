@@ -7,16 +7,16 @@ const create = (req, res) => {
     return res.status(400).json({ status: 400, message: "No body provided ..." });
   }
 
-  const { tanggal, statusHadir, siswaId } = req.body;
+  const { tanggal, statusHadir, idSiswa } = req.body;
 
   if (!tanggal)     { return sendFieldError("tanggal", res); }
   if (!statusHadir) { return sendFieldError("statusHadir", res); }
-  if (!siswaId)     { return sendFieldError("siswaId", res); }
+  if (!idSiswa)     { return sendFieldError("idSiswa", res); }
 
   const absensi = new Absensi({
     tanggal: tanggal,
     statusHadir: statusHadir,
-    siswaId: siswaId,
+    siswaId: idSiswa,
   });
 
   Absensi.create(absensi, (error, data) => {
@@ -53,7 +53,13 @@ const findAll = (req, res) => {
   });
 }
 
-const update = (idSiswa, req, res) => {
+const update = (req, res) => {
+  const idSiswa = req.params.id;
+
+  if (!req.body) {
+    return res.status(400).json({ status: 400, message: "No body provied ..." });
+  }
+
   const { tanggal, statusHadir } = req.body;
 
   if (!tanggal) {
