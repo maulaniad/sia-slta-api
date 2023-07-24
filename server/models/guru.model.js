@@ -27,7 +27,9 @@ Guru.create = (newGuru, resultHandler) => {
         resultHandler(error, null);
       }
 
-      resultHandler(null, result);
+      const dataGuru = {id: result.insertId, ...result};
+
+      resultHandler(null, dataGuru);
     }
   );
 }

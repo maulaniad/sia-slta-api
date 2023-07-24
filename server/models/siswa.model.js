@@ -51,7 +51,7 @@ Siswa.create = (newSiswa, resultHandler) => {
         return;
       }
 
-      const dataSiswa = {id: result.insertId, ...newSiswa}; 
+      const dataSiswa = {id: result.insertId, ...newSiswa};
 
       resultHandler(null, dataSiswa);
     }
