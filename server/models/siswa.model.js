@@ -62,7 +62,7 @@ Siswa.getAll = (keyword, resultHandler) => {
   let filter = keyword;
   let sql = `SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
              alamat, userId, kelasId FROM siswa`;
-  
+
   if (filter) {
     filter = `%${keyword}%`;
     sql += ` WHERE namaSiswa LIKE ?`;
