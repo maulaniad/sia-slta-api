@@ -3,16 +3,16 @@ import database from "../config/db.js";
 class Kelas {
   constructor(kelas) {
     this.namaKelas = kelas.namaKelas;
-    this.idKonsentrasi = kelas.idKonsentrasi;
+    this.konsentrasiId = kelas.konsentrasiId;
   }
 }
 
 Kelas.create = (newKelas, resultHandler) => {
   database.query(
     `
-      INSERT INTO kelas (namaKelas, idKonsentrasi)
+      INSERT INTO kelas (namaKelas, konsentrasiId)
       VALUES (?, ?)
-    `, [newKelas.namaKelas, newKelas.idKonsentrasi],
+    `, [newKelas.namaKelas, newKelas.konsentrasiId],
     (error, result) => {
       if (error) {
         console.log(`Error creating Kelas: ${error}`);
@@ -29,7 +29,7 @@ Kelas.create = (newKelas, resultHandler) => {
 Kelas.getAll = (keyword, resultHandler) => {
   let sql = `SELECT idKelas, namaKelas, namaKonsentrasi FROM kelas
              JOIN konsentrasi
-             ON konsentrasi.idKonsentrasi = kelas.idKonsentrasi`;
+             ON konsentrasi.idKonsentrasi = kelas.konsentrasiId`;
   let filter = keyword;
 
   if (filter) {
@@ -52,7 +52,7 @@ Kelas.getById = (idKelas, resultHandler) => {
     `
       SELECT idKelas, namaKelas, namaKonsentrasi FROM kelas
       JOIN konsentrasi
-      ON konsentrasi.idKonsentrasi = kelas.idKonsentrasi
+      ON konsentrasi.idKonsentrasi = kelas.konsentrasiId
       WHERE idKelas = ?
     `, [idKelas], (error, result) => {
       if (error) {
@@ -68,7 +68,7 @@ Kelas.getSiswa = (idKelas, resultHandler) => {
   database.query(
     `
       SELECT idKelas, namaKelas, namaKonsentrasi FROM kelas
-      JOIN konsentrasi ON konsentrasi.idKonsentrasi = kelas.idKonsentrasi
+      JOIN konsentrasi ON konsentrasi.idKonsentrasi = kelas.konsentrasiId
       WHERE idKelas = ?
     `, [idKelas], (error, result) => {
       if (error) {
@@ -103,11 +103,11 @@ Kelas.getSiswa = (idKelas, resultHandler) => {
 Kelas.update = (idKelas, newKelas, resultHandler) => {
   database.query(
     `
-      UPDATE kelas SET namaKelas = ?, idKonsentrasi = ?,
+      UPDATE kelas SET namaKelas = ?, konsentrasiId = ?
       WHERE idKelas = ?
     `, [
       newKelas.namaKelas,
-      newKelas.idKonsentrasi,
+      newKelas.konsentrasiId,
       idKelas
     ], (error, result) => {
       if (error) {
