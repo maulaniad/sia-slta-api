@@ -7,7 +7,6 @@ class Nilai {
     this.uts = nilai.uts;
     this.uas = nilai.uas;
     this.siswaId = nilai.siswaId;
-    this.guruId = nilai.guruId;
     this.mapelId = nilai.mapelId;
   }
 }
@@ -18,8 +17,7 @@ Nilai.create = (newNilai, resultHandler) => {
   database.query(
     `
       INSERT INTO nilai (
-        tmt, tmtt, uts, uas, siswaId,
-        guruId, mapelId
+        tmt, tmtt, uts, uas, siswaId, mapelId
       ) VALUES (${placeholders})
     `, [
       newNilai.tmt,
@@ -27,7 +25,6 @@ Nilai.create = (newNilai, resultHandler) => {
       newNilai.uts,
       newNilai.uas,
       newNilai.siswaId,
-      newNilai.guruId,
       newNilai.mapelId,
       newNilai.semesterId
     ], (error, result) => {
@@ -63,9 +60,9 @@ Nilai.getAll = async (idKelas, resultHandler) => {
         }
       );
     });
-  
+
     const dataNilaiSiswa = [];
-  
+
     for (const value of dataSiswaResult) {
       const nilaiResult = await new Promise((resolve, reject) => {
         database.query(

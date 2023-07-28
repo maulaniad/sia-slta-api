@@ -7,7 +7,7 @@ const create = (req, res) => {
   }
 
   const {
-    tmt, tmtt, uts, uas, idSiswa, idGuru, idMapel
+    tmt, tmtt, uts, uas, idSiswa, idMapel
   } = req.body;
 
   if (!tmt)     { return sendFieldError("tmt", res); }
@@ -15,7 +15,6 @@ const create = (req, res) => {
   if (!uts)     { return sendFieldError("uts", res); }
   if (!uas)     { return sendFieldError("uas", res); }
   if (!idSiswa) { return sendFieldError("idSiswa", res); }
-  if (!idGuru)  { return sendFieldError("idGuru", res); }
   if (!idMapel) { return sendFieldError("idMapel", res); }
 
   const nilai = new Nilai({
@@ -24,7 +23,6 @@ const create = (req, res) => {
     uts: uts,
     uas: uas,
     siswaId: idSiswa,
-    guruId: idGuru,
     mapelId: idMapel,
   });
 
@@ -94,12 +92,11 @@ const update = (req, res) => {
       uts: currentNilaiData.uts,
       uas: currentNilaiData.uas,
       siswaId: currentNilaiData.siswaId,
-      guruId: currentNilaiData.guruId,
       mapelId: currentNilaiData.mapelId,
     });
 
     const {
-      tmt, tmtt, uts, uas, idSiswa, idGuru, idMapel, idKelas
+      tmt, tmtt, uts, uas, idSiswa, idMapel, idKelas
     } = req.body;
   
     if (tmt)     { newData.tmt = tmt; }
@@ -107,7 +104,6 @@ const update = (req, res) => {
     if (uts)     { newData.uts = uts; }
     if (uas)     { newData.uas = uas; }
     if (idSiswa) { newData.siswaId = idSiswa; }
-    if (idGuru)  { newData.guruId = idGuru; }
     if (idMapel) { newData.mapelId = idMapel; }
     if (idKelas) { newData.kelasId = idKelas; }
 

@@ -27,7 +27,12 @@ Siswa.getLinkedUserId = async (idUser) => {
       return null;
     }
 
-    return rows[0][0].userId
+    try {
+      return rows[0][0].userId
+    }
+    catch (error) {
+      return null;
+    }
   });
 }
 
