@@ -30,7 +30,12 @@ const login = (req, res) => {
       role: data[0].role,
     }, "private-key", { expiresIn: "24h" });
   
-    return res.status(200).json({ status: 200, message: "Login success!", token: token });
+    return res.status(200).json({
+      status: 200,
+      message: "Login success!",
+      role: data[0].role,
+      token: token
+    });
   });
 }
 
