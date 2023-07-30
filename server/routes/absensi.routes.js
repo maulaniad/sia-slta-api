@@ -6,7 +6,7 @@ import { admin, siswa } from "../middleware/role.js";
 const absensiRouter = Router();
 
 absensiRouter.post("/", [auth, admin], create);
-absensiRouter.get("/kelas/:id", [auth, admin], findAllByDate);
+absensiRouter.get("/tanggal", [auth, admin], findAllByDate);
 absensiRouter.get("/:id", [auth, siswa], findAll);
 absensiRouter.put("/:id", [auth, admin], update);
 
