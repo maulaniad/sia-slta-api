@@ -49,7 +49,8 @@ Absensi.getAll = (idSiswa, resultHandler) => {
 Absensi.getByDate = (tanggal, resultHandler) => {
   database.query(
     `
-      SELECT tanggal, statusHadir, siswaId FROM absensi
+      SELECT tanggal, statusHadir, namaSiswa FROM absensi
+      JOIN siswa ON siswa.idSiswa = absensi.siswaId
       WHERE tanggal = ?
     `, [tanggal],
     (error, result) => {

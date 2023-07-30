@@ -53,6 +53,30 @@ const findAll = (req, res) => {
   });
 }
 
+const findAllByDate = (req, res) => {
+  const tanggal = req.body.tanggal;
+
+  if (!tanggal) {
+    return sendFieldError("tanggal", res);
+  }
+
+  Absensi.getByDate(tanggal, (error, data) => {
+    if (error) {
+      return res.status(500).json({ status: 500, message: `${error.message}` });
+    }
+
+    if (data.length === 0) {
+      return res.status(200).json({ status: 200, message: "Data empty ..." });
+    }
+
+    data.forEach(
+      (row) => row.tanggal = convertDate(row.tanggal, DateFormat.FromMysql.toString())
+    );
+
+    return res.status(200).json({ status: 200, message: "Success!", data: data });
+  });
+}
+
 const update = (req, res) => {
   const idSiswa = req.params.id;
 
@@ -107,4 +131,4 @@ const update = (req, res) => {
   });
 }
 
-export { create, findAll, update };
+export { create, findAll, findAllByDate, update };
