@@ -31,7 +31,7 @@ Absensi.create = (newAbsensi, resultHandler) => {
 Absensi.getAll = (idSiswa, resultHandler) => {
   database.query(
     `
-      SELECT tanggal, statusHadir, siswaId FROM absensi
+      SELECT idAbsensi, tanggal, statusHadir, siswaId FROM absensi
       WHERE siswaId = ?
     `, [idSiswa],
     (error, result) => {
@@ -49,7 +49,7 @@ Absensi.getAll = (idSiswa, resultHandler) => {
 Absensi.getById = (idAbsensi, resultHandler) => {
   database.query(
     `
-      SELECT tanggal, statusHadir, siswaId
+      SELECT idAbsensi, tanggal, statusHadir, siswaId
       FROM absensi
       WHERE idAbsensi = ?
     `, [idAbsensi],
@@ -68,7 +68,7 @@ Absensi.getById = (idAbsensi, resultHandler) => {
 Absensi.getByDate = (tanggal, resultHandler) => {
   database.query(
     `
-      SELECT tanggal, statusHadir, idSiswa, namaSiswa, idKelas, namaKelas
+      SELECT idAbsensi, tanggal, statusHadir, idSiswa, namaSiswa, idKelas, namaKelas
       FROM absensi
       JOIN siswa ON siswa.idSiswa = absensi.siswaId
       JOIN kelas ON kelas.idKelas = siswa.kelasId
