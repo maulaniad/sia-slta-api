@@ -78,23 +78,19 @@ const findAllByDate = (req, res) => {
 }
 
 const update = (req, res) => {
-  const idSiswa = req.params.id;
+  const idAbsensi = req.params.id;
 
   if (!req.body) {
     return res.status(400).json({ status: 400, message: "No body provied ..." });
   }
 
-  const { tanggal, statusHadir } = req.body;
-
-  if (!tanggal) {
-    return sendFieldError("tanggal", res);
-  }
+  const { statusHadir } = req.body;
 
   if (!statusHadir) {
     return sendFieldError("statusHadir", res);
   }
 
-  Absensi.getByDate(tanggal, (error, data) => {
+  Absensi.getById(idAbsensi, (error, data) => {
     if (error) {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
@@ -109,12 +105,12 @@ const update = (req, res) => {
 
     const currentData = data[0];
     const newData = new Absensi({
-      tanggal: tanggal,
+      tanggal: currentData.tanggal,
       statusHadir: statusHadir,
-      siswaId: idSiswa,
+      siswaId: currentData.siswaId
     });
 
-    Absensi.update(tanggal, newData, (error, data) => {
+    Absensi.update(idAbsensi, newData, (error, data) => {
       if (error) {
         return res.status(500).json({ status: 500, message: `${error.message}` });
       }
