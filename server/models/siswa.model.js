@@ -71,7 +71,9 @@ Siswa.create = (newSiswa, resultHandler) => {
 Siswa.getAll = (keyword, resultHandler) => {
   let filter = keyword;
   let sql = `SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
-             alamat, userId, kelasId FROM siswa`;
+             alamat, userId, kelasId, namaKelas
+             FROM siswa
+             JOIN kelas ON kelas.idKelas = siswa.kelasId`;
 
   if (filter) {
     filter = `%${keyword}%`;
@@ -91,8 +93,12 @@ Siswa.getAll = (keyword, resultHandler) => {
 
 Siswa.getById = (idSiswa, resultHandler) => {
   database.query(
-    `SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
-     alamat, userId, kelasId FROM siswa WHERE idSiswa = ?`, [idSiswa],
+    `
+      SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir,
+      alamat, userId, kelasId, namaKelas
+      FROM siswa
+      JOIN kelas ON kelas.idKelas = siswa.kelasId WHERE idSiswa = ?
+    `, [idSiswa],
     (error, result) => {
       if (error) {
         console.log(`Error querying the DB: ${error}`);
