@@ -8,6 +8,8 @@ import mapelRouter from "./server/routes/mapel.routes.js";
 import kelasRouter from "./server/routes/kelas.routes.js";
 import absensiRouter from "./server/routes/absensi.routes.js";
 import nilaiRouter from "./server/routes/nilai.routes.js";
+import konsentrasiRouter from "./server/routes/konsentrasi.routes.js";
+import semesterRouter from "./server/routes/semester.routes.js";
 
 const app = express();
 
@@ -26,6 +28,8 @@ app.use("/mapel", mapelRouter);
 app.use("/kelas", kelasRouter);
 app.use("/absensi", absensiRouter);
 app.use("/nilai", nilaiRouter);
+app.use("/konsentrasi", konsentrasiRouter);
+app.use("/semester", semesterRouter);
 
 app.listen(process.env.SERVER_PORT, () => {
   console.log(`Express runs at http://127.0.0.1:${process.env.SERVER_PORT}`);
