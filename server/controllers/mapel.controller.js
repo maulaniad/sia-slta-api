@@ -6,11 +6,12 @@ const create = (req, res) => {
     return res.status(400).json({ status: 400, message: "No body provided ..." });
   }
 
-  const { namaMapel, jam, hari, idKelas, idSemester } = req.body;
+  const { namaMapel, jam, hari, idGuru, idKelas, idSemester } = req.body;
 
   if (!namaMapel)  { return sendFieldError("namaMapel", res); }
   if (!jam)        { return sendFieldError("jam", res); }
   if (!hari)       { return sendFieldError("hari", res); }
+  if (!idGuru)     { return sendFieldError("idGuru", res); }
   if (!idKelas)    { return sendFieldError("idKelas", res); }
   if (!idSemester) { return sendFieldError("idSemester", res); }
 
@@ -18,6 +19,7 @@ const create = (req, res) => {
     namaMapel: namaMapel,
     jam: jam,
     hari: hari,
+    guruId: idGuru,
     kelasId: idKelas,
     semesterId: idSemester
   });
@@ -78,19 +80,23 @@ const update = (req, res) => {
       return res.status(500).json({ status: 500, message: `${error.message}` });
     }
 
-    const { namaMapel, jam, hari, idKelas, idSemester } = req.body;
+    const { namaMapel, jam, hari, idGuru, idKelas, idSemester } = req.body;
     const currentMapelData = result[0];
     const newMapel = new Mapel({
       namaMapel: namaMapel,
       jam: jam,
       hari: hari,
+      guruId: idGuru,
       kelasId: idKelas,
       semesterId: idSemester
     });
 
-    if (!namaMapel) { newMapel.namaMapel = currentMapelData.namaMapel }
-    if (!jam)       { newMapel.jam = currentMapelData.jam }
-    if (!hari)      { newMapel.hari = currentMapelData.hari }
+    if (!namaMapel)  { newMapel.namaMapel = currentMapelData.namaMapel }
+    if (!jam)        { newMapel.jam = currentMapelData.jam }
+    if (!hari)       { newMapel.hari = currentMapelData.hari }
+    if (!idGuru)     { newMapel.guruId = currentMapelData.guruId }
+    if (!idKelas)    { newMapel.kelasId = currentMapelData.kelasId }
+    if (!idSemester) { newMapel.semesterId = currentMapelData.semesterId }
 
     Mapel.update(id, newMapel, (error, data) => {
       if (error) {
