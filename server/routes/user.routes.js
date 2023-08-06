@@ -12,9 +12,9 @@ import {
 
 const userRouter = Router();
 
-userRouter.get("/", [auth, admin], findAll);
-userRouter.get("/:id", [auth, admin], findById);
 userRouter.get("/unused", [auth, admin], findAllUnused);
+userRouter.get("/:id", [auth, admin], findById);
+userRouter.get("/", [auth, admin], findAll);
 userRouter.post("/", [auth, admin], create);
 userRouter.put("/:id", [auth, admin], update);
 userRouter.delete("/:id", [auth, admin], deleteById);

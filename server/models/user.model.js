@@ -51,10 +51,10 @@ User.getAll = (roleFilter, resultHandler) => {
 User.getUnusedUsers = (resultHandler) => {
   database.query(
     `
-      SELECT user.idUser, user.username, user.password, user.roleId
+      SELECT idUser, username, password, roleId
       FROM user
       LEFT JOIN siswa ON user.idUser = siswa.userId
-      WHERE siswa.userId IS NULL AND user.roleId = 0;
+      WHERE siswa.userId IS NULL AND user.roleId = 0
     `,
     (error, result) => {
       if (error) {
