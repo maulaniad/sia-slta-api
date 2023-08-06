@@ -66,6 +66,34 @@ const findAll = (req, res) => {
   );
 }
 
+const findAllUnused = (req, res) => {
+  User.getUnusedUsers(
+    (error, result) => {
+      if (error) {
+        return res.status(500).json({ status: 500, message: `${error.message}` });
+      }
+
+      if (result.length === 0) {
+        return res.status(200).json({
+          status: 200,
+          message: "Data empty ...",
+          data: [],
+        });
+      }
+
+      result.forEach((element) => {
+        element.roleId = convertRole(element.roleId, RoleFormat.ToString);
+      });
+
+      return res.status(200).json({
+        status: 200,
+        message: "Success!",
+        data: result
+      });
+    }
+  );
+}
+
 const findById = (req, res) => {
   const id = req.params.id;
 
@@ -151,4 +179,4 @@ const deleteById = (req, res) => {
   });
 }
 
-export { create, findAll, findById, update, deleteById };
+export { create, findAll, findAllUnused, findById, update, deleteById };

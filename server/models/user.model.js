@@ -48,6 +48,26 @@ User.getAll = (roleFilter, resultHandler) => {
   );
 }
 
+User.getUnusedUsers = (resultHandler) => {
+  database.query(
+    `
+      SELECT user.idUser, user.username, user.password, user.roleId
+      FROM user
+      LEFT JOIN siswa ON user.idUser = siswa.userId
+      WHERE siswa.userId IS NULL AND user.roleId = 0;
+    `,
+    (error, result) => {
+      if (error) {
+        console.log(`Error querying the DB: ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  );
+}
+
 User.getById = (idUser, resultHandler) => {
   database.query(
     `
