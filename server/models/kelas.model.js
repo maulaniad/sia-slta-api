@@ -27,9 +27,11 @@ Kelas.create = (newKelas, resultHandler) => {
 }
 
 Kelas.getAll = (keyword, resultHandler) => {
-  let sql = `SELECT idKelas, namaKelas, namaKonsentrasi FROM kelas
-             JOIN konsentrasi
-             ON konsentrasi.idKonsentrasi = kelas.konsentrasiId`;
+  let sql = `SELECT idKelas, namaKelas, namaKonsentrasi, COUNT(idSiswa) as jmlSiswa
+             FROM kelas
+             LEFT JOIN siswa ON siswa.kelasId = kelas.idKelas
+             JOIN konsentrasi ON konsentrasi.idKonsentrasi = kelas.konsentrasiId
+             GROUP BY kelas.idKelas, kelas.namaKelas`;
   let filter = keyword;
 
   if (filter) {
@@ -50,10 +52,12 @@ Kelas.getAll = (keyword, resultHandler) => {
 Kelas.getById = (idKelas, resultHandler) => {
   database.query(
     `
-      SELECT idKelas, namaKelas, namaKonsentrasi FROM kelas
-      JOIN konsentrasi
-      ON konsentrasi.idKonsentrasi = kelas.konsentrasiId
+      SELECT idKelas, namaKelas, namaKonsentrasi, COUNT(idSiswa) as jmlSiswa
+      FROM kelas
+      LEFT JOIN siswa ON siswa.kelasId = kelas.idKelas
+      JOIN konsentrasi ON konsentrasi.idKonsentrasi = kelas.konsentrasiId
       WHERE idKelas = ?
+      GROUP BY kelas.idKelas, kelas.namaKelas
     `, [idKelas], (error, result) => {
       if (error) {
         console.log(`Error querying the DB: ${error}`);
