@@ -27,7 +27,7 @@ Kelas.create = (newKelas, resultHandler) => {
 }
 
 Kelas.getAll = (keyword, resultHandler) => {
-  let sql = `SELECT idKelas, namaKelas, namaKonsentrasi, COUNT(idSiswa) as jmlSiswa
+  let sql = `SELECT idKelas, namaKelas, namaKonsentrasi, COUNT(idSiswa) as jmlSiswa, konsentrasiId
              FROM kelas
              LEFT JOIN siswa ON siswa.kelasId = kelas.idKelas
              JOIN konsentrasi ON konsentrasi.idKonsentrasi = kelas.konsentrasiId
@@ -52,7 +52,7 @@ Kelas.getAll = (keyword, resultHandler) => {
 Kelas.getById = (idKelas, resultHandler) => {
   database.query(
     `
-      SELECT idKelas, namaKelas, namaKonsentrasi, COUNT(idSiswa) as jmlSiswa
+      SELECT idKelas, namaKelas, namaKonsentrasi, COUNT(idSiswa) as jmlSiswa, konsentrasiId
       FROM kelas
       LEFT JOIN siswa ON siswa.kelasId = kelas.idKelas
       JOIN konsentrasi ON konsentrasi.idKonsentrasi = kelas.konsentrasiId
