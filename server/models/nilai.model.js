@@ -67,7 +67,7 @@ Nilai.getAll = async (idKelas, resultHandler) => {
       const nilaiResult = await new Promise((resolve, reject) => {
         database.query(
           `
-            SELECT tmt, tmtt, uts, uas, namaMapel, tingkatSemester
+            SELECT tmt, tmtt, uts, uas, mapelId, namaMapel, tingkatSemester
             FROM nilai
             JOIN mapel ON mapel.idMapel = nilai.mapelId
             JOIN semester ON semester.idSemester = mapel.semesterId
@@ -90,6 +90,7 @@ Nilai.getAll = async (idKelas, resultHandler) => {
         mapel: nilaiResult.map((row) => ({
           tingkatSemester: row.tingkatSemester,
           namaMapel: row.namaMapel,
+          mapelId: row.mapelId,
           nilai: {
             tmt: row.tmt,
             tmtt: row.tmtt,
