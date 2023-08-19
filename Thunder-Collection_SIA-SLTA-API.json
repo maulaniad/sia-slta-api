@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "SIA-SLTA-API",
-    "dateExported": "2023-07-24T10:30:33.916Z",
+    "dateExported": "2023-08-19T13:44:23.583Z",
     "version": "1.1",
     "folders": [
         {
@@ -64,11 +64,11 @@
             "method": "POST",
             "sortNum": 5000,
             "created": "2023-07-18T06:49:16.945Z",
-            "modified": "2023-07-18T06:53:51.669Z",
+            "modified": "2023-07-28T04:13:09.296Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -78,11 +78,11 @@
                 "form": [
                     {
                         "name": "username",
-                        "value": "jericho"
+                        "value": "aegon"
                     },
                     {
                         "name": "password",
-                        "value": "jericho"
+                        "value": "conqueror"
                     },
                     {
                         "name": "role",
@@ -101,11 +101,11 @@
             "method": "GET",
             "sortNum": 7500,
             "created": "2023-07-18T06:55:37.830Z",
-            "modified": "2023-07-18T06:55:56.117Z",
+            "modified": "2023-07-28T04:13:41.858Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -120,11 +120,11 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-07-18T04:05:40.126Z",
-            "modified": "2023-07-18T06:28:03.179Z",
+            "modified": "2023-07-28T04:17:15.351Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjUyOTA0LCJleHAiOjE2ODk3MzkzMDR9.FT_rp2beDpw6vEOuMvP6rGwN-0LABF6Ap0USp_vro8M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -134,15 +134,15 @@
                 "form": [
                     {
                         "name": "nisn",
-                        "value": "123456777"
+                        "value": "123456773"
                     },
                     {
                         "name": "namaSiswa",
-                        "value": "John Elden Ring"
+                        "value": "Aegon Targaryen"
                     },
                     {
                         "name": "email",
-                        "value": "john@eldenring.com"
+                        "value": "aegon@conqueror.com"
                     },
                     {
                         "name": "jenisKelamin",
@@ -154,11 +154,11 @@
                     },
                     {
                         "name": "alamat",
-                        "value": "Fringefolk Hero's Grave, Jl. The First Step, Limgrave"
+                        "value": "Valyria"
                     },
                     {
                         "name": "userId",
-                        "value": "0"
+                        "value": "13"
                     },
                     {
                         "name": "kelasId",
@@ -178,11 +178,11 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-18T06:49:09.241Z",
-            "modified": "2023-07-18T06:56:19.163Z",
+            "modified": "2023-07-28T04:14:14.743Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [
@@ -203,11 +203,11 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2023-07-18T04:03:04.356Z",
-            "modified": "2023-07-24T08:59:26.696Z",
+            "modified": "2023-07-28T04:17:37.157Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -218,21 +218,21 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
             "name": "Siswa - Read All Filtered",
-            "url": "localhost:8080/siswa?keyword=Mameng",
+            "url": "localhost:8080/siswa?keyword=Aegon",
             "method": "GET",
             "sortNum": 25000,
             "created": "2023-07-18T06:56:45.760Z",
-            "modified": "2023-07-18T06:57:12.466Z",
+            "modified": "2023-07-28T04:17:58.603Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjUyOTA0LCJleHAiOjE2ODk3MzkzMDR9.FT_rp2beDpw6vEOuMvP6rGwN-0LABF6Ap0USp_vro8M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [
                 {
                     "name": "keyword",
-                    "value": "Mameng",
+                    "value": "Aegon",
                     "isPath": false
                 }
             ],
@@ -243,15 +243,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
             "name": "Siswa - Read One",
-            "url": "localhost:8080/siswa/1",
+            "url": "localhost:8080/siswa/12",
             "method": "GET",
             "sortNum": 30000,
             "created": "2023-07-18T04:04:57.037Z",
-            "modified": "2023-07-19T14:16:46.311Z",
+            "modified": "2023-07-28T04:18:34.387Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Nzc2MTI1LCJleHAiOjE2ODk4NjI1MjV9.4FbRpnS77kGa_h5J5zbDxwbEjSoyusvpb7o-x9xCcOE"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -262,15 +262,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
             "name": "Siswa - Update",
-            "url": "localhost:8080/siswa/1",
+            "url": "localhost:8080/siswa/12",
             "method": "PUT",
             "sortNum": 40000,
             "created": "2023-07-18T04:12:07.523Z",
-            "modified": "2023-07-18T04:15:39.561Z",
+            "modified": "2023-07-28T04:22:39.669Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjUyOTA0LCJleHAiOjE2ODk3MzkzMDR9.FT_rp2beDpw6vEOuMvP6rGwN-0LABF6Ap0USp_vro8M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -280,15 +280,15 @@
                 "form": [
                     {
                         "name": "nisn",
-                        "value": "999999999"
+                        "value": "666666666"
                     },
                     {
                         "name": "namaSiswa",
-                        "value": "Sekiro"
+                        "value": "Snow Jon"
                     },
                     {
                         "name": "email",
-                        "value": "sekiro@shadowsdietwice.com"
+                        "value": "snow@thenorth.com"
                     },
                     {
                         "name": "jenisKelamin",
@@ -300,12 +300,11 @@
                     },
                     {
                         "name": "alamat",
-                        "value": "Ashina, Japan"
+                        "value": "Winterfell, Northern Westeros"
                     },
                     {
                         "name": "kelasId",
-                        "value": "null",
-                        "isDisabled": true
+                        "value": "1"
                     }
                 ]
             },
@@ -320,11 +319,11 @@
             "method": "POST",
             "sortNum": 40000,
             "created": "2023-07-18T13:54:31.051Z",
-            "modified": "2023-07-18T13:59:42.685Z",
+            "modified": "2023-07-28T04:26:01.721Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -334,15 +333,15 @@
                 "form": [
                     {
                         "name": "nip",
-                        "value": "997722123"
+                        "value": "9977333123"
                     },
                     {
                         "name": "namaGuru",
-                        "value": "Tommy Shelby"
+                        "value": "Anakin Skywalker"
                     },
                     {
                         "name": "email",
-                        "value": "thomas@shelbycompany.com"
+                        "value": "anakin@theforce.com"
                     },
                     {
                         "name": "jenisKelamin",
@@ -365,11 +364,11 @@
             "method": "POST",
             "sortNum": 47500,
             "created": "2023-07-24T08:58:15.813Z",
-            "modified": "2023-07-24T09:22:33.055Z",
+            "modified": "2023-07-28T05:45:40.497Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -398,15 +397,7 @@
                         "value": "3"
                     },
                     {
-                        "name": "idGuru",
-                        "value": "2"
-                    },
-                    {
                         "name": "idMapel",
-                        "value": "1"
-                    },
-                    {
-                        "name": "idSemester",
                         "value": "1"
                     }
                 ]
@@ -476,7 +467,7 @@
             "method": "POST",
             "sortNum": 60000,
             "created": "2023-07-18T04:00:55.339Z",
-            "modified": "2023-07-18T06:28:37.500Z",
+            "modified": "2023-07-28T04:09:00.981Z",
             "headers": [],
             "params": [],
             "body": {
@@ -500,15 +491,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "4c7e56c4-c7c4-47ad-a510-b7497d48ca41",
             "name": "Siswa - Delete",
-            "url": "localhost:8080/siswa/7",
+            "url": "localhost:8080/siswa/12",
             "method": "DELETE",
             "sortNum": 60000,
             "created": "2023-07-18T06:27:11.223Z",
-            "modified": "2023-07-18T06:28:50.405Z",
+            "modified": "2023-07-28T04:25:33.744Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYxNzE3LCJleHAiOjE2ODk3NDgxMTd9.nmI23FIFF1FacsVFr0o23Ht3qpJRhhRJl4JHypCp5iI"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -519,15 +510,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
             "name": "User - Read One",
-            "url": "localhost:8080/user/4",
+            "url": "localhost:8080/user/13",
             "method": "GET",
             "sortNum": 65000,
             "created": "2023-07-18T06:51:38.234Z",
-            "modified": "2023-07-18T06:58:37.730Z",
+            "modified": "2023-07-28T04:14:45.920Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -542,11 +533,11 @@
             "method": "GET",
             "sortNum": 80000,
             "created": "2023-07-18T13:54:47.618Z",
-            "modified": "2023-07-24T08:59:53.947Z",
+            "modified": "2023-07-28T04:28:10.169Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -557,21 +548,21 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
             "name": "Guru - Read All Filtered",
-            "url": "localhost:8080/guru?keyword=john",
+            "url": "localhost:8080/guru?keyword=skywalker",
             "method": "GET",
             "sortNum": 90000,
             "created": "2023-07-18T13:55:58.369Z",
-            "modified": "2023-07-18T13:56:31.544Z",
+            "modified": "2023-07-28T04:28:36.686Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [
                 {
                     "name": "keyword",
-                    "value": "john",
+                    "value": "skywalker",
                     "isPath": false
                 }
             ],
@@ -582,15 +573,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
             "name": "Guru - Read One",
-            "url": "localhost:8080/guru/3",
+            "url": "localhost:8080/guru/6",
             "method": "GET",
             "sortNum": 95000,
             "created": "2023-07-18T14:01:44.801Z",
-            "modified": "2023-07-18T14:01:57.271Z",
+            "modified": "2023-07-28T04:29:05.058Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -605,11 +596,11 @@
             "method": "GET",
             "sortNum": 95000,
             "created": "2023-07-24T08:57:09.301Z",
-            "modified": "2023-07-24T08:57:32.660Z",
+            "modified": "2023-08-18T09:15:11.356Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5MjM0OTg5NywiZXhwIjoxNjkyNDM2Mjk3fQ.Phgoi5pxxh8nuuSBXOnSfzI34Rgvr1Ulvxq9aS4_gSg"
                 }
             ],
             "params": [],
@@ -620,15 +611,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
             "name": "Guru - Update",
-            "url": "localhost:8080/guru/4",
+            "url": "localhost:8080/guru/2",
             "method": "PUT",
             "sortNum": 100000,
             "created": "2023-07-18T13:58:50.469Z",
-            "modified": "2023-07-18T14:00:17.707Z",
+            "modified": "2023-07-28T04:29:40.211Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -638,19 +629,21 @@
                 "form": [
                     {
                         "name": "nip",
-                        "value": "997722444"
+                        "value": "997722444",
+                        "isDisabled": true
                     },
                     {
                         "name": "namaGuru",
-                        "value": "Arthur Shelby"
+                        "value": "Werner Heisenberg"
                     },
                     {
                         "name": "email",
-                        "value": "arthur@shelbycompany.com"
+                        "value": "heisenberg@gmail.com"
                     },
                     {
                         "name": "jenisKelamin",
-                        "value": "Laki-laki"
+                        "value": "Laki-laki",
+                        "isDisabled": true
                     },
                     {
                         "name": "tanggalLahir",
@@ -665,15 +658,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
             "name": "User - Update",
-            "url": "localhost:8080/user/1",
+            "url": "localhost:8080/user/3",
             "method": "PUT",
             "sortNum": 107500,
             "created": "2023-07-18T07:49:23.018Z",
-            "modified": "2023-07-18T07:50:03.171Z",
+            "modified": "2023-07-28T04:15:26.857Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -683,7 +676,7 @@
                 "form": [
                     {
                         "name": "username",
-                        "value": "maximillian"
+                        "value": "wick_john"
                     },
                     {
                         "name": "password",
@@ -702,11 +695,11 @@
             "method": "POST",
             "sortNum": 135000,
             "created": "2023-07-24T09:54:24.643Z",
-            "modified": "2023-07-24T09:58:35.122Z",
+            "modified": "2023-07-28T04:48:03.952Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -743,15 +736,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "0310f5c3-908a-4ac3-939f-14040e59cdf9",
             "name": "User - Delete",
-            "url": "localhost:8080/user/10",
+            "url": "localhost:8080/user/3",
             "method": "DELETE",
             "sortNum": 150000,
             "created": "2023-07-18T06:52:15.803Z",
-            "modified": "2023-07-18T07:53:07.429Z",
+            "modified": "2023-07-28T04:15:58.479Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5NjYzMTgxLCJleHAiOjE2ODk3NDk1ODF9.TL9GK8KbjqANJ2mhBuq7eZDtItNXVO9bfNNXfsIRGmY"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -762,15 +755,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "58277b71-4d75-482b-aa53-03cf005dfc61",
             "name": "Guru - Delete",
-            "url": "localhost:8080/guru/4",
+            "url": "localhost:8080/guru/6",
             "method": "DELETE",
             "sortNum": 180000,
             "created": "2023-07-18T14:00:42.511Z",
-            "modified": "2023-07-18T14:01:02.772Z",
+            "modified": "2023-07-28T04:30:06.791Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjg5Njg4NTA5LCJleHAiOjE2ODk3NzQ5MDl9.42IPfjSzogQATOE3jhxD--8T1qeF1u5rKR07rigVP-M"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -781,15 +774,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "8bb60dfe-15b6-40fc-8410-35b23ab2c397",
             "name": "Nilai - Read One",
-            "url": "localhost:8080/nilai/siswa/1",
+            "url": "localhost:8080/nilai/siswa/3",
             "method": "GET",
             "sortNum": 190000,
             "created": "2023-07-24T08:55:26.350Z",
-            "modified": "2023-07-24T08:56:32.413Z",
+            "modified": "2023-07-28T05:46:50.278Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -804,11 +797,11 @@
             "method": "PUT",
             "sortNum": 220000,
             "created": "2023-07-24T09:17:44.431Z",
-            "modified": "2023-07-24T09:21:44.868Z",
+            "modified": "2023-07-28T05:48:52.793Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -818,7 +811,7 @@
                 "form": [
                     {
                         "name": "idSiswa",
-                        "value": "2"
+                        "value": "3"
                     },
                     {
                         "name": "idMapel",
@@ -826,7 +819,7 @@
                     },
                     {
                         "name": "tmt",
-                        "value": "90"
+                        "value": "60"
                     },
                     {
                         "name": "tmtt",
@@ -834,7 +827,7 @@
                     },
                     {
                         "name": "uts",
-                        "value": "80"
+                        "value": "60"
                     },
                     {
                         "name": "uas",
@@ -854,11 +847,11 @@
             "method": "DELETE",
             "sortNum": 230000,
             "created": "2023-07-24T09:22:12.963Z",
-            "modified": "2023-07-24T09:23:01.583Z",
+            "modified": "2023-07-28T05:49:20.713Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -887,11 +880,11 @@
             "method": "POST",
             "sortNum": 240000,
             "created": "2023-07-24T09:36:05.438Z",
-            "modified": "2023-07-24T09:36:53.645Z",
+            "modified": "2023-07-28T04:30:51.566Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -920,11 +913,11 @@
             "method": "GET",
             "sortNum": 250000,
             "created": "2023-07-24T09:38:38.160Z",
-            "modified": "2023-07-24T09:41:26.066Z",
+            "modified": "2023-08-18T09:11:50.035Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5MjM0OTg5NywiZXhwIjoxNjkyNDM2Mjk3fQ.Phgoi5pxxh8nuuSBXOnSfzI34Rgvr1Ulvxq9aS4_gSg"
                 }
             ],
             "params": [],
@@ -939,11 +932,11 @@
             "method": "GET",
             "sortNum": 260000,
             "created": "2023-07-24T09:40:57.435Z",
-            "modified": "2023-07-24T09:41:31.192Z",
+            "modified": "2023-07-28T04:31:37.366Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [
@@ -956,57 +949,19 @@
             "tests": []
         },
         {
-            "_id": "1981620f-ab4d-4fcf-b542-ab4db78eb128",
-            "colId": "318ef983-718d-403e-945f-c2e09b893818",
-            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
-            "name": "Kelas - Delete",
-            "url": "localhost:8080/kelas/10",
-            "method": "DELETE",
-            "sortNum": 260000,
-            "created": "2023-07-24T09:45:21.708Z",
-            "modified": "2023-07-24T09:46:40.381Z",
-            "headers": [
-                {
-                    "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
-                }
-            ],
-            "params": [],
-            "tests": []
-        },
-        {
-            "_id": "d160876e-be8c-4728-a29e-c5eb90e4da5c",
-            "colId": "318ef983-718d-403e-945f-c2e09b893818",
-            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
-            "name": "Kelas - Read Siswa (Per Kelas)",
-            "url": "localhost:8080/kelas/1",
-            "method": "GET",
-            "sortNum": 265000,
-            "created": "2023-07-24T09:42:16.704Z",
-            "modified": "2023-07-24T09:43:02.485Z",
-            "headers": [
-                {
-                    "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
-                }
-            ],
-            "params": [],
-            "tests": []
-        },
-        {
             "_id": "4a7325ee-1158-4d3e-9e71-eb59f6ce9cb6",
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
             "name": "Kelas - Update",
-            "url": "localhost:8080/kelas/1",
+            "url": "localhost:8080/kelas/11",
             "method": "PUT",
-            "sortNum": 270000,
+            "sortNum": 260000,
             "created": "2023-07-24T09:41:48.808Z",
-            "modified": "2023-07-24T09:46:16.048Z",
+            "modified": "2023-07-28T04:33:12.802Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -1016,7 +971,7 @@
                 "form": [
                     {
                         "name": "namaKelas",
-                        "value": "X MIA 1"
+                        "value": "XI MIA 1"
                     },
                     {
                         "name": "idKonsentrasi",
@@ -1024,6 +979,44 @@
                     }
                 ]
             },
+            "tests": []
+        },
+        {
+            "_id": "d160876e-be8c-4728-a29e-c5eb90e4da5c",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Read Siswa (Per Kelas)",
+            "url": "localhost:8080/kelas/1",
+            "method": "GET",
+            "sortNum": 260000,
+            "created": "2023-07-24T09:42:16.704Z",
+            "modified": "2023-07-28T04:32:11.968Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1981620f-ab4d-4fcf-b542-ab4db78eb128",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "1959723f-9e52-4565-9653-2a91840d4864",
+            "name": "Kelas - Delete",
+            "url": "localhost:8080/kelas/11",
+            "method": "DELETE",
+            "sortNum": 260000,
+            "created": "2023-07-24T09:45:21.708Z",
+            "modified": "2023-07-28T04:33:35.265Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
+                }
+            ],
+            "params": [],
             "tests": []
         },
         {
@@ -1035,11 +1028,11 @@
             "method": "GET",
             "sortNum": 270000,
             "created": "2023-07-24T09:53:30.235Z",
-            "modified": "2023-07-24T09:53:50.114Z",
+            "modified": "2023-07-28T04:48:27.429Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -1050,15 +1043,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
             "name": "Mapel - Read One",
-            "url": "localhost:8080/mapel/1",
+            "url": "localhost:8080/mapel/32",
             "method": "GET",
             "sortNum": 280000,
             "created": "2023-07-24T09:54:02.922Z",
-            "modified": "2023-07-24T09:54:14.421Z",
+            "modified": "2023-07-28T04:48:54.950Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -1069,15 +1062,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
             "name": "Mapel - Update",
-            "url": "localhost:8080/mapel/31",
+            "url": "localhost:8080/mapel/32",
             "method": "PUT",
             "sortNum": 290000,
             "created": "2023-07-24T09:59:05.196Z",
-            "modified": "2023-07-24T10:06:21.572Z",
+            "modified": "2023-07-28T04:49:13.996Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -1118,11 +1111,11 @@
             "method": "POST",
             "sortNum": 290000,
             "created": "2023-07-24T10:19:42.127Z",
-            "modified": "2023-07-24T10:21:28.794Z",
+            "modified": "2023-07-28T04:51:47.715Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -1132,7 +1125,7 @@
                 "form": [
                     {
                         "name": "tanggal",
-                        "value": "2023-07-24"
+                        "value": "2023-07-28"
                     },
                     {
                         "name": "statusHadir",
@@ -1150,16 +1143,64 @@
             "_id": "fc561ab1-d5e1-4ac2-99a5-26289e2dd7c0",
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
-            "name": "Absensi - Read All (Per Siswa)",
-            "url": "localhost:8080/absensi/1",
+            "name": "Absensi - Read One (Per Siswa)",
+            "url": "localhost:8080/absensi/2",
             "method": "GET",
             "sortNum": 295000,
             "created": "2023-07-24T10:26:29.201Z",
-            "modified": "2023-07-24T10:26:56.564Z",
+            "modified": "2023-08-19T13:36:18.580Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5MjQ1MjE2OSwiZXhwIjoxNjkyNTM4NTY5fQ.OTJUPqSaPvGhkLzQJVbECryqev1v5PXhd_bg7gB7SpM"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3dcaa83c-66fe-4cfb-9795-86c8c06b1efd",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
+            "name": "Absensi - Read One (Per Kelas)",
+            "url": "localhost:8080/absensi/kelas/1",
+            "method": "POST",
+            "sortNum": 296250,
+            "created": "2023-08-19T13:42:37.377Z",
+            "modified": "2023-08-19T13:43:42.494Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5MjQ1MjE2OSwiZXhwIjoxNjkyNTM4NTY5fQ.OTJUPqSaPvGhkLzQJVbECryqev1v5PXhd_bg7gB7SpM"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "tanggal",
+                        "value": "2023-07-10"
+                    }
+                ]
+            },
+            "tests": []
+        },
+        {
+            "_id": "be8b4406-9ff4-4005-82d1-73d9610ff94f",
+            "colId": "318ef983-718d-403e-945f-c2e09b893818",
+            "containerId": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
+            "name": "Absensi - Read All (Per Tanggal)",
+            "url": "localhost:8080/absensi/tanggal",
+            "method": "POST",
+            "sortNum": 297500,
+            "created": "2023-07-30T01:10:07.092Z",
+            "modified": "2023-07-30T01:29:36.979Z",
+            "headers": [
+                {
+                    "name": "api-key",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5MDY3OTQ0NCwiZXhwIjoxNjkwNzY1ODQ0fQ.GnlkWfkef4YvCmqxICLbY38Wuy2MZuBH6zPLJnwTV3A"
                 }
             ],
             "params": [],
@@ -1170,14 +1211,6 @@
                     {
                         "name": "tanggal",
                         "value": "2023-07-24"
-                    },
-                    {
-                        "name": "statusHadir",
-                        "value": "Hadir"
-                    },
-                    {
-                        "name": "idSiswa",
-                        "value": "1"
                     }
                 ]
             },
@@ -1188,15 +1221,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "62e10ebc-53d8-4d47-9a16-a1881e037b2c",
             "name": "Mapel - Delete",
-            "url": "localhost:8080/mapel/31",
+            "url": "localhost:8080/mapel/32",
             "method": "DELETE",
             "sortNum": 300000,
             "created": "2023-07-24T10:10:28.639Z",
-            "modified": "2023-07-24T10:10:56.037Z",
+            "modified": "2023-07-28T04:49:32.770Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwNTE3MzQwLCJleHAiOjE2OTA2MDM3NDB9.Cu1gKbEZRWbRH5DXHKUkTVDuHx9ufx4iM4F04OzXs-g"
                 }
             ],
             "params": [],
@@ -1207,15 +1240,15 @@
             "colId": "318ef983-718d-403e-945f-c2e09b893818",
             "containerId": "7fd82152-d4d2-4fc8-a88b-f32bef55612a",
             "name": "Absensi - Update",
-            "url": "localhost:8080/absensi/1",
+            "url": "localhost:8080/absensi/3",
             "method": "PUT",
             "sortNum": 300000,
             "created": "2023-07-24T10:21:42.051Z",
-            "modified": "2023-07-24T10:26:24.634Z",
+            "modified": "2023-07-30T03:04:20.116Z",
             "headers": [
                 {
                     "name": "api-key",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IkFETUlOIiwiaWF0IjoxNjkwMTgyNDkyLCJleHAiOjE2OTAyNjg4OTJ9.AFhE_8z_tvI5ryz-wyvGoblCT2nAw3TiJR94W3xFbmw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY5MDY3OTQ0NCwiZXhwIjoxNjkwNzY1ODQ0fQ.GnlkWfkef4YvCmqxICLbY38Wuy2MZuBH6zPLJnwTV3A"
                 }
             ],
             "params": [],
@@ -1229,7 +1262,7 @@
                     },
                     {
                         "name": "statusHadir",
-                        "value": "Hadir"
+                        "value": "Tidak Hadir"
                     }
                 ]
             },
