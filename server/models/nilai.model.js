@@ -46,7 +46,7 @@ Nilai.getAll = async (idKelas, resultHandler) => {
     const dataSiswaResult = await new Promise((resolve, reject) => {
       database.query(
         `
-          SELECT idSiswa, nisn, namaSiswa, namaKelas FROM siswa
+          SELECT idSiswa, nisn, namaSiswa, idKelas, namaKelas FROM siswa
           JOIN kelas ON kelas.idKelas = siswa.kelasId
           WHERE idKelas = ?
         `, [idKelas],
@@ -67,7 +67,7 @@ Nilai.getAll = async (idKelas, resultHandler) => {
       const nilaiResult = await new Promise((resolve, reject) => {
         database.query(
           `
-            SELECT tmt, tmtt, uts, uas, mapelId, namaMapel, tingkatSemester
+            SELECT tmt, tmtt, uts, uas, mapelId, kelasId, namaMapel, tingkatSemester
             FROM nilai
             JOIN mapel ON mapel.idMapel = nilai.mapelId
             JOIN semester ON semester.idSemester = mapel.semesterId
@@ -86,6 +86,7 @@ Nilai.getAll = async (idKelas, resultHandler) => {
       const dataNilai = {
         nisn: value.nisn,
         namaSiswa: value.namaSiswa,
+        idKelas: value.idKelas,
         namaKelas: value.namaKelas,
         mapel: nilaiResult.map((row) => ({
           tingkatSemester: row.tingkatSemester,
