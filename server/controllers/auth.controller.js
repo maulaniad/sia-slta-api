@@ -12,7 +12,7 @@ const login = (req, res) => {
     return res.status(400).json({ status: 400, message: "Username or Password cannot be empty ..." });
   }
 
-  User.getByUsername(req.body.username, (error, data) => {
+  User.getByUsername(username, (error, data) => {
     if (error) {
       return res.status(500).json({ status: 500, message: `Error: ${error.message}` });
     }
@@ -27,12 +27,14 @@ const login = (req, res) => {
 
     const token = jwt.sign({
       id: data[0].idUser,
+      user: data[0].username,
       role: data[0].role,
     }, "private-key", { expiresIn: "24h" });
   
     return res.status(200).json({
       status: 200,
       message: "Login success!",
+      user: data[0].username,
       role: data[0].role,
       token: token
     });
