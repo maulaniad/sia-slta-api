@@ -86,6 +86,27 @@ Absensi.getByDate = (tanggal, resultHandler) => {
   );
 }
 
+Absensi.getByClass = (tanggal, kelas, resultHandler) => {
+  database.query(
+    `
+      SELECT idAbsensi, tanggal, statusHadir, idSiswa, namaSiswa, idKelas, namaKelas
+      FROM absensi
+      JOIN siswa ON siswa.idSiswa = absensi.siswaId
+      JOIN kelas ON kelas.idKelas = siswa.kelasId
+      WHERE tanggal = ? AND idKelas = ?
+    `, [tanggal, kelas],
+    (error, result) => {
+      if (error) {
+        console.log(`Error querying the DB: ${error}`);
+        resultHandler(error, null);
+        return;
+      }
+
+      resultHandler(null, result);
+    }
+  );
+}
+
 Absensi.update = (idAbsensi, newAbsensi, resultHandler) => {
   database.query(
     `
