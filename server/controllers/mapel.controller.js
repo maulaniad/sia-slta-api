@@ -103,8 +103,8 @@ const update = (req, res) => {
         res.status(500).json({ status: 500, message: `${error.message}` });
       }
 
-      return res.status(201).json({
-        status: 201,
+      return res.status(200).json({
+        status: 200,
         message: "Success!",
         before: currentMapelData,
         after: newMapel,
