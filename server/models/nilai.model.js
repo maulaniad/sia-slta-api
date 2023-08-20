@@ -85,6 +85,7 @@ Nilai.getAll = async (idKelas, resultHandler) => {
 
       const dataNilai = {
         nisn: value.nisn,
+        idSiswa: value.idSiswa,
         namaSiswa: value.namaSiswa,
         idKelas: value.idKelas,
         namaKelas: value.namaKelas,
