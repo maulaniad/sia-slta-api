@@ -15,7 +15,7 @@ Mapel.create = (mapel, resultHandler) => {
   database.query(
     `
       INSERT INTO mapel (namaMapel, jam, hari, guruId, kelasId, semesterId)
-      VALUES (?, ?, ?, ?, ?)
+      VALUES (?, ?, ?, ?, ?, ?)
     `, [mapel.namaMapel, mapel.jam, mapel.hari, mapel.guruId, mapel.kelasId, mapel.semesterId],
     (error, result) => {
       if (error) {
