@@ -8,7 +8,7 @@ const create = (req, res) => {
   }
 
   const {
-    nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat, userId, kelasId
+    nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat, idUser, idKelas
   } = req.body;
 
   if (!nisn)         { return sendFieldError("nisn", res); }
@@ -17,7 +17,7 @@ const create = (req, res) => {
   if (!jenisKelamin) { return sendFieldError("jenisKelamin", res); }
   if (!tanggalLahir) { return sendFieldError("tanggalLahir", res); }
   if (!alamat)       { return sendFieldError("alamat", res); }
-  if (!userId)       { return sendFieldError("userId", res); }
+  if (!idUser)       { return sendFieldError("userId", res); }
 
   const siswa = new Siswa({
     nisn: nisn,
@@ -26,8 +26,8 @@ const create = (req, res) => {
     jenisKelamin: jenisKelamin,
     tanggalLahir: tanggalLahir,
     alamat: alamat,
-    userId: userId,
-    kelasId: kelasId
+    userId: idUser,
+    kelasId: idKelas
   });
 
   Siswa.create(siswa, (error, data) => {
