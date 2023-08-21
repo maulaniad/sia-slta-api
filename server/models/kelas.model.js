@@ -82,7 +82,7 @@ Kelas.getSiswa = (idKelas, resultHandler) => {
 
       database.query(
         `
-          SELECT nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat
+          SELECT idSiswa, nisn, namaSiswa, email, jenisKelamin, tanggalLahir, alamat
           FROM siswa WHERE kelasId = ?
         `, [idKelas], (error, data) => {
           if (error) {
@@ -91,6 +91,7 @@ Kelas.getSiswa = (idKelas, resultHandler) => {
           }
 
           const dataSiswa = {
+            idSiswa: result[0].idSiswa,
             idKelas: result[0].idKelas,
             namaKelas: result[0].namaKelas,
             namaKonsentrasi: result[0].namaKonsentrasi,
