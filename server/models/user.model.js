@@ -8,6 +8,28 @@ class User {
   }
 }
 
+User.getLinkedSiswaId = async (idUser) => {
+  return database.promise().query(
+    "SELECT idSiswa FROM siswa WHERE userId = ?", [idUser],
+    (error) => {
+      if (error) {
+        return null;
+      }
+    }
+  ).then((rows) => {
+    if (rows.length === 0) {
+      return null;
+    }
+
+    try {
+      return rows[0][0].idSiswa;
+    }
+    catch (error) {
+      return null;
+    }
+  });
+}
+
 User.create = (newUser, resultHandler) => {
   database.query(
     `
