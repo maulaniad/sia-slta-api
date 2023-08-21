@@ -12,7 +12,7 @@ const login = (req, res) => {
     return res.status(400).json({ status: 400, message: "Username or Password cannot be empty ..." });
   }
 
-  User.getByUsername(username, (error, data) => {
+  User.getByUsername(username, async (error, data) => {
     if (error) {
       return res.status(500).json({ status: 500, message: `Error: ${error.message}` });
     }
@@ -25,8 +25,11 @@ const login = (req, res) => {
       return res.status(400).json({ status: 400, message: "Invalid password ..." });
     }
 
+    const idSiswa = await User.getLinkedSiswaId(data[0].idUser);
+
     const token = jwt.sign({
       id: data[0].idUser,
+      idSiswa: idSiswa,
       user: data[0].username,
       role: data[0].role,
     }, "private-key", { expiresIn: "24h" });
@@ -34,6 +37,7 @@ const login = (req, res) => {
     return res.status(200).json({
       status: 200,
       message: "Login success!",
+      idSiswa: idSiswa,
       user: data[0].username,
       role: data[0].role,
       token: token
