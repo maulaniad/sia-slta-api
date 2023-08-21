@@ -14,7 +14,6 @@ class Siswa {
 }
 
 Siswa.getLinkedUserId = async (idUser) => {
-  console.log(idUser);
   return await database.promise().query(
     "SELECT idSiswa FROM siswa WHERE userId = ?", [idUser],
     (error) => {
