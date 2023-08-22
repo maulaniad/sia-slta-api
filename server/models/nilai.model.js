@@ -114,10 +114,11 @@ Nilai.getAll = async (idKelas, resultHandler) => {
 
 Nilai.getById = (idSiswa, resultHandler) => {
   database.query(
-    `SELECT tmt, tmtt, uts, uas, namaMapel
+    `SELECT tmt, tmtt, uts, uas, idMapel, namaMapel, semesterId, tingkatSemester
      FROM nilai
      JOIN siswa ON siswa.idSiswa = nilai.siswaId
      JOIN mapel ON mapel.idMapel = nilai.mapelId
+     JOIN semester ON mapel.semesterId = semester.idSemester
      WHERE siswaId = ?
      `, [idSiswa],
     (error, result) => {
